@@ -4,5 +4,8 @@
 
 Для связи по вопросам теории:
 
-Telegramm: @RacoonRockett
-e-mail: myinfomail123@mail.ru
+Telegramm: @RacoonRockett;<br>
+
+e-mail: myinfomail123@mail.ru<br>
+
+site:https://racoonrockett.github.io/Theory/
