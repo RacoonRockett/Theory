@@ -3,9 +3,10 @@
 Статический сайт с изложением теории.
 <br>
 <br>
-Для связи по вопросам теории:
+Для связи по вопросам теории:<br>
 <br>
-Telegramm: @RacoonRockett;<br>
+<br>
+Telegramm: @RacoonRockett<br>
 
 e-mail: myinfomail123@mail.ru<br>
 
