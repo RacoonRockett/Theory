@@ -1,11 +1,10 @@
 # Теория Квантового Осознания
 
 Статический сайт с изложением теории.
-/n
-/n
-/n
+<br>
+<br>
 Для связи по вопросам теории:
-
+<br>
 Telegramm: @RacoonRockett;<br>
 
 e-mail: myinfomail123@mail.ru<br>
