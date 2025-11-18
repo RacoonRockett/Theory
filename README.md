@@ -6,7 +6,7 @@
 Для связи по вопросам теории:<br>
 <br>
 <br>
-Telegramm: @RacoonRockett<br>
+Telegramm: @RacoonRockett<br>https://t.me/+W2MEnUEi_eQyNDAy
 
 e-mail: myinfomail123@mail.ru<br>
 
