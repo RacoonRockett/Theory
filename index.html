@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -460,10 +460,10 @@ transform: none;">
 		<h2>ЧТО ЭТО ТАКОЕ?</h2>
 		<p>НИКАКОЙ МАГИИ. ТОЛЬКО АРХИТЕКТУРА.<br>
 Забудьте о магии. Ваше сознание — сложная система, а не загадочная субстанция. И тут её техническое описание.<br>
-Этот сайт — не о духовных откровениях. Это — чертёж механизма.<br> 
-Если вы ищете тайные знания или магические практики, вы их не найдёте.<br> 
+Этот сайт — не о духовных откровениях. Это — чертёж механизма.<br>
+Если вы ищете тайные знания или магические практики, вы их не найдёте.<br>
 Здесь только логика, онтология и инструменты для инженерии собственного осознания.</p>
-		
+
 	</section>
     <section id="investigator" class="container" style="padding: 4rem 0; opacity: 1;
 transform: none;">
@@ -771,7 +771,7 @@ onchange="updateCompass()"> 🚀 Летит незаметно</label>
                                     <label><input type="radio" name="time"
 value="entanglement" onchange="updateCompass()"> 🔄 Искажается, скачет</label>
                                     <label><input type="radio" name="time" value="stable"
-onchange="updateCompass()"> ⏱ Нормально</label>
+onchange="updateCompass()"> ⏱ Идёт нормально, нейтрально</label>
                                 </div>
                             </div>
 
@@ -782,11 +782,12 @@ onchange="updateCompass()"> ⏱ Нормально</label>
                                     <label><input type="radio" name="body"
 value="tight_control" onchange="updateCompass()"> 💪 Напряжение, скованность</label>
                                     <label><input type="radio" name="body"
-value="energy_depletion" onchange="updateCompass()"> 😴 Усталость, тяжесть</label>
+value="energy_depletion" onchange="updateCompass()"> 😴 Усталость, тяжесть, истощение</label>
                                     <label><input type="radio" name="body" value="resource"
-onchange="updateCompass()"> 🌟 Лёгкость, энергия</label>
+onchange="updateCompass()"> 🌟 Лёгкость, энергия, тонус</label>
                                     <label><input type="radio" name="body"
-value="entanglement" onchange="updateCompass()"> 🌫 Дереализация</label>
+value="entanglement" onchange="updateCompass()"> 🌫 Дереализация, онемение,
+"выключенность"</label>
                                 </div>
                             </div>
 
@@ -795,13 +796,15 @@ value="entanglement" onchange="updateCompass()"> 🌫 Дереализация</
                                 <h4>3. ВОПРОС О ЗАДАЧЕ: «Что происходит с задачей?»</h4>
                                 <div class="option-group">
                                     <label><input type="radio" name="task"
-value="tight_control" onchange="updateCompass()"> 🚫 Не могу начать</label>
+value="tight_control" onchange="updateCompass()"> 🚫 Не могу начать, прокрастинация</label>
                                     <label><input type="radio" name="task"
-value="entanglement" onchange="updateCompass()"> 🌀 Кручусь на месте</label>
+value="entanglement" onchange="updateCompass()"> 🌀 Кручусь на месте, много мыслей, но нет
+результата</label>
                                     <label><input type="radio" name="task"
-value="energy_depletion" onchange="updateCompass()"> 💤 Нет интереса</label>
+value="energy_depletion" onchange="updateCompass()"> 💤 Нет интереса, апатия, всё
+безразлично</label>
                                     <label><input type="radio" name="task" value="resource"
-onchange="updateCompass()"> ✅ Решается легко</label>
+onchange="updateCompass()"> ✅ Сфокусирован, решается легко, состояние потока</label>
                                 </div>
                             </div>
                         </div>
@@ -908,10 +911,11 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
 
     <footer class="container">
         <p>Теория Квантового Осознания © 2025 | Новая оптика для понимания реальности</p>
-		<p>Концепция в разработке | <a href="https://t.me/RacoonRockett" style="color: #00b3b3; text decoration: none;">@RacoonRockett</a></p>
+		<p>Концепция в разработке | <a href="https://t.me/+W2MEnUEi_eQyNDAy" style="color: #00b3b3; text decoration: none;">Лаборатория</a></p>
     </footer>
 
     <script>
+        // ★★★ ОБНОВЛЁННАЯ ЛОГИКА РАСЧЁТА - ТОЧНАЯ КОПИЯ GOOGLE FORMS ★★★
         function updateCompass() {
             const time = document.querySelector('input[name="time"]:checked')?.value;
             const body = document.querySelector('input[name="body"]:checked')?.value;
@@ -923,100 +927,247 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
             const toolHtml = document.getElementById('diagnosis-tool');
 
             if (time && body && task) {
-                const scores = {
-                    "time": {
-                        "energy_depletion": 2,
-                        "flow": 0,
-                        "entanglement": 1,
-                        "stable": 0
-                    },
-                    "body": {
-                        "tight_control": 3,
-                        "energy_depletion": 2,
-                        "resource": 0,
-                        "entanglement": 1
-                    },
-                    "task": {
-                        "tight_control": 3,
-                        "entanglement": 1,
-                        "energy_depletion": 2,
-                        "resource": 0
-                    }
-                };
+                // Конвертируем значения в текстовые метки как в Google Forms
+                const timeText = getAnswerText(time, 'time');
+                const bodyText = getAnswerText(body, 'body');
+                const taskText = getAnswerText(task, 'task');
 
-                const totalScore = scores.time[time] + scores.body[body] + scores.task[task];
+                // Запускаем точную логику из Google Forms
+                const result = calculateDiagnosisByTheory(timeText, bodyText, taskText);
 
-                if (body === "entanglement" && time === "entanglement") {
-                    setDiagnosis("energy_depletion");
-                } else if (task === "tight_control" && body === "tight_control") {
-                    setDiagnosis("tight_control");
-                } else {
-                    if (totalScore >= 6) {
-                        setDiagnosis("tight_control");
-                    } else if (totalScore >= 4) {
-                        setDiagnosis("energy_depletion");
-                    } else if (totalScore >= 2) {
-                        setDiagnosis("entanglement");
-                    } else {
-                        setDiagnosis("resource");
-                    }
+                setDiagnosis(result.diagnosis, result.tool);
+            } else {
+                resultDiv.style.display = 'none';
+            }
+        }
+
+        // Функция конвертации значений в текстовые метки
+        function getAnswerText(value, type) {
+            const maps = {
+                time: {
+                    'energy_depletion': '🐌 Тянется мучительно',
+                    'flow': '🚀 Летит незаметно',
+                    'entanglement': '🔄 Искажается, скачет',
+                    'stable': '⏱ Идёт нормально, нейтрально'
+                },
+                body: {
+                    'tight_control': '💪 Напряжение, скованность',
+                    'energy_depletion': '😴 Усталость, тяжесть, истощение',
+                    'resource': '🌟 Лёгкость, энергия, тонус',
+                    'entanglement': '🌫 Дереализация, онемение, "выключенность"'
+                },
+                task: {
+                    'tight_control': '🚫 Не могу начать, прокрастинация',
+                    'entanglement': '🌀 Кручусь на месте, много мыслей, но нет результата',
+                    'energy_depletion': '💤 Нет интереса, апатия, всё безразлично',
+                    'resource': '✅ Сфокусирован, решается легко, состояние потока'
                 }
+            };
 
-                function setDiagnosis(diagnosis) {
-                    const diagnoses = {
-                        tight_control: {
-                            state: "🔒 ЗАЖАТЫЙ КОНТРОЛЬ",
-                            description: "«Смотритель» работает в режиме гиперконтроля, W(Фактор воли) зашкаливает.",
-                            tool: `
-                                <strong>ИНСТРУМЕНТ: Тонкая настройка Смотрителя</strong><br>
-                                1. Сознательно отступите от задачи<br>
-                                2. Займите мозг рутиной (помойте чашку, пройдитесь)<br>
-                                3. Вернитесь к задаче через 20-30 минут
-                            `
-                        },
-                        energy_depletion: {
-                            state: "⚠️ ЭНЕРГЕТИЧЕСКОЕ ИСТОЩЕНИЕ",
-                            description: "Поток_КО низкий, Сопротивление_Океана высокое. F(Фактор усталости) высокий.",
-                            tool: `
-                                <strong>ИНСТРУМЕНТ: Энергосберегающий режим</strong><br>
-                                1. Отдых, сон<br>
-                                2. Снижение Шум_Контекста (выключить уведомления)<br>
-                                3. Простые, автоматические задачи
-                            `
-                        },
-                        entanglement: {
-                            state: "🌀 ЗАПУТАННОСТЬ",
-                            description: "«Кольца» запускаются, но не замыкаются. Высокий конфликт паттернов.",
-                            tool: `
-                                <strong>ИНСТРУМЕНТ: Выход за Грань</strong><br>
-                                1. Признайте тупик<br>
-                                2. Создайте абсурдно сложную, качественно иную задачу<br>
-                                3. Штурмуйте её 15-20 минут<br>
-                                4. Вернитесь к исходной проблеме
-                            `
-                        },
-                        resource: {
-                            state: "🌟 РЕСУРСНОЕ СОСТОЯНИЕ",
-                            description: "Система работает идеально. E_системы высокое,оптимальные параметры сопротивления.",
-                            tool: `
-                                <strong>РЕКОМЕНДАЦИЯ: Не мешать</strong><br>
-                                Продолжайте текущую деятельность. Система работает в оптимальном режиме.
-                            `
-                        }
-                    };
+            return maps[type][value] || value;
+        }
 
-            const diagnosisData = diagnoses[diagnosis];
+        // ★★★ ТОЧНАЯ КОПИЯ ЛОГИКИ ИЗ GOOGLE FORMS ★★★
+        function calculateDiagnosisByTheory(timeAnswer, bodyAnswer, taskAnswer) {
+            // 1. Проверяем точные комбинации
+            var exactMatch = checkExactCombinations(timeAnswer, bodyAnswer, taskAnswer);
+            if (exactMatch) return exactMatch;
+
+            // 2. Если нет точного совпадения - используем теорию "Кольца"
+            return calculateByRingTheory(timeAnswer, bodyAnswer, taskAnswer);
+        }
+
+        function checkExactCombinations(timeAnswer, bodyAnswer, taskAnswer) {
+            var key = timeAnswer + "_" + bodyAnswer + "_" + taskAnswer;
+
+            var exactCombinations = {
+                // Зажатый контроль
+                "🐌 Тянется мучительно_💪 Напряжение, скованность_🚫 Не могу начать, прокрастинация": {
+                    diagnosis: "tight_control",
+                    tool: "Тонкая настройка Смотрителя"
+                },
+                "🐌 Тянется мучительно_💪 Напряжение, скованность_🌀 Кручусь на месте, много мыслей, но нет результата": {
+                    diagnosis: "tight_control",
+                    tool: "Тонкая настройка Смотрителя"
+                },
+
+                // Энергетическое истощение
+                "🐌 Тянется мучительно_😴 Усталость, тяжесть, истощение_💤 Нет интереса, апатия, всё безразлично": {
+                    diagnosis: "energy_depletion",
+                    tool: "Энергосберегающий режим"
+                },
+                "🐌 Тянется мучительно_😴 Усталость, тяжесть, истощение_🚫 Не могу начать, прокрастинация": {
+                    diagnosis: "energy_depletion",
+                    tool: "Энергосберегающий режим"
+                },
+                "🚀 Летит незаметно_😴 Усталость, тяжесть, истощение_✅ Сфокусирован, решается легко, состояние потока": {
+                    diagnosis: "energy_depletion",
+                    tool: "Энергосберегающий режим"
+                },
+
+                // Запутанность
+                "🔄 Искажается, скачет_🌫 Дереализация, онемение, \"выключенность\"_🌀 Кручусь на месте, много мыслей, но нет результата": {
+                    diagnosis: "entanglement",
+                    tool: "Выход за Грань"
+                },
+                "🔄 Искажается, скачет_🌫 Дереализация, онемение, \"выключенность\"_💤 Нет интереса, апатия, всё безразлично": {
+                    diagnosis: "entanglement",
+                    tool: "Выход за Грань"
+                },
+
+                // Ресурсное состояние
+                "🚀 Летит незаметно_🌟 Лёгкость, энергия, тонус_✅ Сфокусирован, решается легко, состояние потока": {
+                    diagnosis: "resource",
+                    tool: "Не мешать"
+                },
+                "⏱ Идёт нормально, нейтрально_🌟 Лёгкость, энергия, тонус_✅ Сфокусирован, решается легко, состояние потока": {
+                    diagnosis: "resource",
+                    tool: "Не мешать"
+                }
+            };
+
+            return exactCombinations[key] || null;
+        }
+
+        function calculateByRingTheory(timeAnswer, bodyAnswer, taskAnswer) {
+            // Анализируем КАЧЕСТВО процессов в каждом измерении
+            var timeQuality = analyzeTimeQuality(timeAnswer);
+            var bodyQuality = analyzeBodyQuality(bodyAnswer);
+            var taskQuality = analyzeTaskQuality(taskAnswer);
+
+            // ДИАГНОСТИКА ПО ТИПУ НАРУШЕНИЯ ЦИКЛА
+            if (isBlockage(timeQuality, bodyQuality, taskQuality)) {
+                return {
+                    diagnosis: "tight_control",
+                    tool: "Тонкая настройка Смотрителя"
+                };
+            }
+
+            if (isEnergyFailure(timeQuality, bodyQuality, taskQuality)) {
+                return {
+                    diagnosis: "energy_depletion",
+                    tool: "Энергосберегающий режим"
+                };
+            }
+
+            if (isDisorientation(timeQuality, bodyQuality, taskQuality)) {
+                return {
+                    diagnosis: "entanglement",
+                    tool: "Выход за Грань"
+                };
+            }
+
+            if (isResourceState(timeQuality, bodyQuality, taskQuality)) {
+                return {
+                    diagnosis: "resource",
+                    tool: "Не мешать"
+                };
+            }
+
+            // СЛОЖНЫЕ СМЕШАННЫЕ СОСТОЯНИЯ
+            return {
+                diagnosis: "resource",
+                tool: "Наблюдение и осознавание"
+            };
+        }
+
+        function analyzeTimeQuality(timeAnswer) {
+            var quality = { flow: 0, clarity: 0, presence: 0 };
+
+            if (timeAnswer.includes("Летит") || timeAnswer.includes("нормально")) {
+                quality.flow = 2; quality.clarity = 2; quality.presence = 1;
+            } else if (timeAnswer.includes("Тянется")) {
+                quality.flow = 0; quality.clarity = 1; quality.presence = 2;
+            } else if (timeAnswer.includes("Искажается")) {
+                quality.flow = 1; quality.clarity = 0; quality.presence = 0;
+            }
+            return quality;
+        }
+
+        function analyzeBodyQuality(bodyAnswer) {
+            var quality = { energy: 0, connection: 0, tension: 0 };
+
+            if (bodyAnswer.includes("Лёгкость")) {
+                quality.energy = 2; quality.connection = 2; quality.tension = 0;
+            } else if (bodyAnswer.includes("Усталость")) {
+                quality.energy = 0; quality.connection = 1; quality.tension = 1;
+            } else if (bodyAnswer.includes("Напряжение")) {
+                quality.energy = 1; quality.connection = 0; quality.tension = 2;
+            } else if (bodyAnswer.includes("Дереализация")) {
+                quality.energy = 0; quality.connection = 0; quality.tension = 1;
+            }
+            return quality;
+        }
+
+        function analyzeTaskQuality(taskAnswer) {
+            var quality = { focus: 0, clarity: 0, action: 0 };
+
+            if (taskAnswer.includes("поток") || taskAnswer.includes("Решается")) {
+                quality.focus = 2; quality.clarity = 2; quality.action = 2;
+            } else if (taskAnswer.includes("Не могу начать")) {
+                quality.focus = 1; quality.clarity = 0; quality.action = 0;
+            } else if (taskAnswer.includes("Кручусь")) {
+                quality.focus = 0; quality.clarity = 1; quality.action = 0;
+            } else if (taskAnswer.includes("Нет интереса")) {
+                quality.focus = 0; quality.clarity = 0; quality.action = 1;
+            }
+            return quality;
+        }
+
+        // ★★★ КРИТЕРИИ ДИАГНОСТИКИ ★★★
+        function isBlockage(timeQ, bodyQ, taskQ) {
+            return (bodyQ.tension >= 2 && taskQ.action === 0 && timeQ.flow === 0);
+        }
+
+        function isEnergyFailure(timeQ, bodyQ, taskQ) {
+            return (bodyQ.energy === 0 && (taskQ.clarity === 0 || (taskQ.focus === 2 && bodyQ.energy === 0)));
+        }
+
+        function isDisorientation(timeQ, bodyQ, taskQ) {
+            return (timeQ.clarity === 0 && taskQ.action === 0 && taskQ.clarity === 1);
+        }
+
+        function isResourceState(timeQ, bodyQ, taskQ) {
+            return (bodyQ.energy >= 1 && taskQ.clarity >= 1 && taskQ.action >= 1);
+        }
+
+        function setDiagnosis(diagnosis, tool) {
+            const diagnoses = {
+                tight_control: {
+                    state: "🔒 ЗАЖАТЫЙ КОНТРОЛЬ",
+                    description: "«Смотритель» работает в режиме гиперконтроля. Высокое сопротивление Океана (S), низкая Свобода Смотрителя.",
+                    tool: tool || "Тонкая настройка Смотрителя"
+                },
+                energy_depletion: {
+                    state: "⚠️ ЭНЕРГЕТИЧЕСКОЕ ИСТОЩЕНИЕ",
+                    description: "Низкий Поток_КО, высокое Сопротивление_Океана. E_сис критически низкое.",
+                    tool: tool || "Энергосберегающий режим"
+                },
+                entanglement: {
+                    state: "🌀 ЗАПУТАННОСТЬ",
+                    description: "«Кольца» запускаются, но не замыкаются. Высокий конфликт паттернов, нарушение фазы Мысли.",
+                    tool: tool || "Выход за Грань"
+                },
+                resource: {
+                    state: "🌟 РЕСУРСНОЕ СОСТОЯНИЕ",
+                    description: "Система работает оптимально. E_сис высокое, оптимальные параметры сопротивления.",
+                    tool: tool || "Не мешать"
+                }
+            };
+
+            const diagnosisData = diagnoses[diagnosis] || diagnoses.resource;
+            const resultDiv = document.getElementById('compass-result');
+            const stateText = document.getElementById('diagnosis-state');
+            const descText = document.getElementById('diagnosis-description');
+            const toolHtml = document.getElementById('diagnosis-tool');
+
             stateText.textContent = diagnosisData.state;
             descText.textContent = diagnosisData.description;
-            toolHtml.innerHTML = diagnosisData.tool;
+            toolHtml.innerHTML = `<strong>ИНСТРУМЕНТ: ${diagnosisData.tool}</strong>`;
             resultDiv.style.display = 'block';
         }
 
-    } else {
-        resultDiv.style.display = 'none';
-    }
-}
-
+        // ★★★ СТАРЫЕ ФУНКЦИИ (БЕЗ ИЗМЕНЕНИЙ) ★★★
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1047,7 +1198,7 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
             ring.style.animation = 'none';
             doorway.style.animation = 'none';
             wall.style.animation = 'none';
-            
+
             dot.style.opacity = '0';
             ring.style.opacity = '0';
             doorway.classList.remove('glowing');
