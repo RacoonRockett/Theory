@@ -6,7 +6,7 @@
 Для связи по вопросам теории:<br>
 <br>
 <br>
-Telegramm: @RacoonRockett<br>https://t.me/+W2MEnUEi_eQyNDAy
+Telegramm: @quantum_awareness_theory<br>[https://t.me/+W2MEnUEi_eQyNDAy](https://t.me/+ZsZ6-qh1rUU5ZDQy)
 
 e-mail: myinfomail123@mail.ru<br>
 
