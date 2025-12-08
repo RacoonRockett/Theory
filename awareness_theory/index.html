@@ -1,13 +1,48 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="yandex-verification" content="590d37862c013bc1"/>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="yandex-verification" content="590d37862c013bc1"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Теория Квантового Осознания</title>
+    <title data-key="siteTitle">Теория Квантового Осознания</title>
     <style>
+        /* Добавляем стили для переключателя языка */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .lang-btn {
+            background: rgba(0, 109, 109, 0.8);
+            color: white;
+            border: 1px solid #006d6d;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            background: rgba(0, 179, 179, 0.8);
+            border-color: #00b3b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 179, 179, 0.3);
+        }
+        
+        /* Параметры для визуализации */
+        .param-tag {
+            background: rgba(0, 109, 109, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #00ffff;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -165,7 +200,7 @@ Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
             border-radius: 4px;
         }
 
-	.formula-grid {
+        .formula-grid {
             display: grid;
             gap: 3rem;
             margin-top: 3rem;
@@ -446,114 +481,85 @@ Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
             h2 {
                 font-size: 1.5rem;
             }
+            
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Переключатель языка -->
+    <div class="language-switcher">
+        <button class="lang-btn" id="language-switcher" data-lang-switch onclick="switchLanguage('en')">English</button>
+    </div>
+
     <header>
         <div class="header-content">
-            <h1>ТЕОРИЯ КВАНТОВОГО ОСОЗНАНИЯ</h1>
+            <h1 data-key="siteTitle">ТЕОРИЯ КВАНТОВОГО ОСОЗНАНИЯ</h1>
             <div class="accent-line"></div>
-            <p>Новая оптика для понимания реальности</p>
+            <p data-key="siteSubtitle">Новая оптика для понимания реальности</p>
         </div>
     </header>
-	<section id="explanation" class="container" style="padding: 4rem 0; opacity: 1;
-transform: none;">
-		<h2>ЧТО ЭТО ТАКОЕ?</h2>
-		<p>НИКАКОЙ МАГИИ. ТОЛЬКО АРХИТЕКТУРА.<br>
+    
+    <section id="explanation" class="container" style="padding: 4rem 0; opacity: 1; transform: none;">
+        <h2 data-key="whatIsIt">ЧТО ЭТО ТАКОЕ?</h2>
+        <p data-key="whatIsItText">НИКАКОЙ МАГИИ. ТОЛЬКО АРХИТЕКТУРА.<br>
 Забудьте о магии. Ваше сознание — сложная система, а не загадочная субстанция. И тут её техническое описание.<br>
 Этот сайт — не о духовных откровениях. Это — чертёж механизма.<br>
 Если вы ищете тайные знания или магические практики, вы их не найдёте.<br>
 Здесь только логика, онтология и инструменты для инженерии собственного осознания.</p>
+    </section>
+    
+    <section id="investigator" class="container" style="padding: 4rem 0; opacity: 1; transform: none;">
+        <h2 data-key="investigatorTitle">ИССЛЕДОВАТЕЛЬ: ВВЕДЕНИЕ В СИСТЕМУ</h2>
 
-	</section>
-    <section id="investigator" class="container" style="padding: 4rem 0; opacity: 1;
-transform: none;">
-    <h2>ИССЛЕДОВАТЕЛЬ: ВВЕДЕНИЕ В СИСТЕМУ</h2>
-
-    <div class="grid-2">
-        <div>
-            <p>Вы когда-нибудь замечали:</p>
-            <ul style="margin: 2rem 0;">
-                <li>Как время <em>летит</em>, когда вы увлечены, и <em>тянется</em>, когда
-скучаете?</li>
-                <li>Как внезапно приходит <em>озарение</em> после долгого тупика?</li>
-                <li>Как <em>автоматически</em> выполняете рутину, не задумываясь?</li>
-            </ul>
-            <p>Это не просто метафоры. Это системные процессы, которые
-можно описать и настроить.</p>
-        </div>
-
-        <div style="padding: 2rem; background: rgba(0,109,109,0.1); border-radius: 8px;">
-            <h4>ПРОВЕРЬТЕ НА СЕБЕ:</h4>
-            <div style="margin: 1.5rem 0;">
-                <button onclick="showTimeDemo()" style="background: #006d6d; color: white;
-border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; margin:
-0.5rem;">ВРЕМЯ → ПОТОК</button>
-                <button onclick="showAttentionDemo()" style="background: #006d6d; color:
-white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; margin:
-0.5rem;">ВНИМАНИЕ → КОЛЬЦО</button>
+        <div class="grid-2">
+            <div>
+                <p data-key="investigatorNotice1">Вы когда-нибудь замечали:</p>
+                <ul style="margin: 2rem 0;">
+                    <li data-key="investigatorListItem1">Как время <em>летит</em>, когда вы увлечены, и <em>тянется</em>, когда скучаете?</li>
+                    <li data-key="investigatorListItem2">Как внезапно приходит <em>озарение</em> после долгого тупика?</li>
+                    <li data-key="investigatorListItem3">Как <em>автоматически</em> выполняете рутину, не задумываясь?</li>
+                </ul>
+                <p data-key="investigatorNotice2">Это не просто метафоры. Это системные процессы, которые можно описать и настроить.</p>
             </div>
-            <div id="demo-result" style="min-height: 60px; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 4px; margin-top: 1rem;"></div>
-        </div>
-    </div>
 
-    <div style="text-align: center; margin-top: 3rem;">
-        <button onclick="startTheoryJourney()" style="background: transparent; border: 2px
-solid #006d6d; color: #00b3b3; padding: 1rem 2rem; border-radius: 4px; cursor: pointer;
-font-size: 1.1rem;">
-            ПОНЯТНО → ПЕРЕЙТИ К ТЕОРИИ
-        </button>
-    </div>
-</section>
+            <div style="padding: 2rem; background: rgba(0,109,109,0.1); border-radius: 8px;">
+                <h4 data-key="investigatorCheck">ПРОВЕРЬТЕ НА СЕБЕ:</h4>
+                <div style="margin: 1.5rem 0;">
+                    <button onclick="showTimeDemo()" style="background: #006d6d; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; margin: 0.5rem;" data-key="timeFlowBtn">ВРЕМЯ → ПОТОК</button>
+                    <button onclick="showAttentionDemo()" style="background: #006d6d; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; margin: 0.5rem;" data-key="attentionRingBtn">ВНИМАНИЕ → КОЛЬЦО</button>
+                </div>
+                <div id="demo-result" style="min-height: 60px; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 4px; margin-top: 1rem;"></div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <button onclick="startTheoryJourney()" style="background: transparent; border: 2px solid #006d6d; color: #00b3b3; padding: 1rem 2rem; border-radius: 4px; cursor: pointer; font-size: 1.1rem;" data-key="understandBtn">
+                ПОНЯТНО → ПЕРЕЙТИ К ТЕОРИИ
+            </button>
+        </div>
+    </section>
 
     <main>
         <section id="prologue" class="container">
-            <h2>ПРОЛОГ: ВОПРОС, КОТОРЫЙ ВСЁ ИЗМЕНИЛ</h2>
-            <p>Всё началось с простого вопроса, на который у науки нет прямого ответа: где
-происходит коллапс волновой функции? Поиск решения привёл к созданию новой карты
-реальности, в которой сознание и материя — не две разные сущности, а два аспекта одного
-фундаментального процесса.</p>
+            <h2 data-key="prologueTitle">ПРОЛОГ: ВОПРОС, КОТОРЫЙ ВСЁ ИЗМЕНИЛ</h2>
+            <p data-key="prologueText">Всё началось с простого вопроса, на который у науки нет прямого ответа: где происходит коллапс волновой функции? Поиск решения привёл к созданию новой карты реальности, в которой сознание и материя — не две разные сущности, а два аспекта одного фундаментального процесса.</p>
 
             <div class="emphasis-box">
-                <p>Теория предлагает непротиворечивый ответ на вопрос квантовой механики о
-коллапсе волновой функции: коллапс происходит не в физическом приборе и не в сознании
-наблюдателя, а в фундаментальном процессе — «Кольце», — которое является первичным актом
-связи потенциального (Поле-Сущность) с актуальным (Океан Фона).</p>
+                <p data-key="photonNote">Теория предлагает непротиворечивый ответ на вопрос квантовой механики о коллапсе волновой функции: коллапс происходит не в физическом приборе и не в сознании наблюдателя, а в фундаментальном процессе — «Кольце», — которое является первичным актом связи потенциального (Поле-Сущность) с актуальным (Океан Фона).</p>
             </div>
         </section>
-<script>
-function showTimeDemo() {
-    const result = document.getElementById('demo-result');
-    result.innerHTML = `
-        <p>Эксперимент с восприятием времени:</p>
-        <p>Вспомните момент, когда вы полностью погружены в интересную задачу (поток).</p>
-        <p>Теперь вспомните очередь или скучное ожидание.</p>
-        <p>↓</p>
-        <p>Это демонстрация параметра <span class="param-tag">Δt</span> — субъективного
-времени, которое зависит от плотности процессов осознания.</p>
-    `;
-}
-
-function showAttentionDemo() {
-    const result = document.getElementById('demo-result');
-    result.innerHTML = `
-        <p>Эксперимент с вниманием:</p>
-        <p>Осознайте прямо сейчас: <em>температуру воздуха на коже</em>.</p>
-        <p>А теперь — <em>звуки на заднем плане</em>.</p>
-        <p>↓</p>
-        <p>Каждое такое переключение — одно «Кольцо». Вы только что прошли
-два полных цикла осознания.</p>
-    `;
-}
-
-function startTheoryJourney() {
-    document.getElementById('prologue').scrollIntoView({behavior: 'smooth'});
-}
-</script>
 
         <section id="ontology" class="container">
-            <h2>НОВАЯ ОНТОЛОГИЯ — ПЕРВЫЕ ПРИНЦИПЫ</h2>
+            <h2 data-key="ontologyTitle">НОВАЯ ОНТОЛОГИЯ — ПЕРВЫЕ ПРИНЦИПЫ</h2>
 
             <div class="grid-2">
                 <div class="ring-visualization">
@@ -565,257 +571,189 @@ function startTheoryJourney() {
                     </div>
 
                     <div class="controls">
-                        <button onclick="startAnimation()">▶ ЗАПУСТИТЬ ПРОЦЕСС</button>
+                        <button onclick="startAnimation()" data-key="startProcessBtn">▶ ЗАПУСТИТЬ ПРОЦЕСС</button>
                     </div>
                 </div>
                 <div>
-                    <h3>РЕАЛЬНОСТЬ — ЭТО «КОЛЬЦО»</h3>
-                    <p>Реальность — это не материя и не поле. Реальность — это «Кольцо».
-Единый, целостный акт связи, который мы условно разделяем на «вход» (начало "Кольца") и
-«выход» (коллапс). Представьте дверной проём между комнатами. Вы не можете сказать, что
-одна его сторона "причина", а другая "следствие" Они существуют только вместе. точно так же
-и "Кольцо" - это не последовательность, а сам мост между потенциальным и актуальным. Всё
-то, что вы воспринимаете как реальность, является продуктом бесчисленного колицества
-"Колец".</p>
-                    <p>То, что вы видите на картинке — не движение. Это — сам мост.
-Фундаментальный кирпич мироздания.</p>
+                    <h3 data-key="realityIsRing">РЕАЛЬНОСТЬ — ЭТО «КОЛЬЦО»</h3>
+                    <p data-key="realityText">Реальность — это не материя и не поле. Реальность — это «Кольцо». Единый, целостный акт связи, который мы условно разделяем на «вход» (начало "Кольца") и «выход» (коллапс). Представьте дверной проём между комнатами. Вы не можете сказать, что одна его сторона "причина", а другая "следствие" Они существуют только вместе. точно так же и "Кольцо" - это не последовательность, а сам мост между потенциальным и актуальным. Всё то, что вы воспринимаете как реальность, является продуктом бесчисленного колицества "Колец".</p>
+                    <p data-key="ringExplanation">То, что вы видите на картинке — не движение. Это — сам мост. Фундаментальный кирпич мироздания.</p>
                 </div>
             </div>
         </section>
 
-	<section id="glossary" class="container">
-	    <h2>ГЛОССАРИЙ</h2>
+        <section id="glossary" class="container">
+            <h2 data-key="glossaryTitle">ГЛОССАРИЙ</h2>
 
-	    <div class="glossary">
-                        <div class="term">
-                            <h4>ПОЛЕ-СУЩНОСТЬ</h4>
-                            <p>Определение: Фундаментальный недискретный
-континуум.Потенциал всей возможной реальности. Не обладает формой, временем или каким-либо
-содержанием. Это "сырая" реальность до её осознания.
-Важно: ПС — это не «пространство», где плавают КО. Это потенциал для Акта Осознания.<br> 
-Аналогия: Бесконечный непроявленный океан. (условно — одна сторона двери).</p>
-                        </div>
-			<div class="term">
-                            <h4>КВАНТ ОСОЗНАНИЯ (КО)/«КОЛЬЦО»</h4>
-                            <p>Статус: Первичный акт реальности. Не процесс, а состояние.<br>
-Определение: Единое онтологическое событие, которое может быть описано в двух неразделимых аспектах:<br>
-Аспект КО: Дискретная, точечная единица осознания. («Капля»).<br>
-Аспект «Кольца»: Целостная, развернутая связь, актуализирующая эту единицу в опыте. («Размазанный овал» от капли).<br>
-Ключевой принцип: Не «КО создается в Кольце», а «КО и Кольцо — два способа говорить об одном акте осознания». <br>
-Между ними нет ни временного, ни причинного зазора.<br>
-Аналогия: Момент, когда вы уже поняли шутку («Ага!»). Ваше «Ага!» — это осознанный КО, который и есть завершенное Кольцо.<br>
-Невозможно найти момент «между» непониманием и пониманием.<br> Аналогия: Единичная капля, взятая из океана. Сам
-акт зачерпывания и есть рождение капли. </p>
-                        </div>
-                        <div class="term">
-                            <h4>ОКЕАН ФОНА</h4>
-                            <p>Определение: Не отдельная сущность, а локализованная и
-структурированная частьсамого Поля-Сущности. Динамическая область ПС, вовлечённая в
-устойчивую конфигурацию. Не является мозгом. Мозг - это интерфейс для связи ОФ с КО.<br>
-Аналогия: Ведро в реке с этой же водой.</p>
-                        </div>
-                        <div class="term">
-                            <h4>СМОТРИТЕЛЬ</h4>
-                            <p>Определение: Системная настройка, алгоритм-автопилот.
-Управляет взаимодействием между КО, ОФ и мозгом. Стремится к эффективности, предсказывает и
-автоматизирует "Кольца".<br> Аналогия: "Прошивка" или операционная система процессора.</p>
-                        </div>
-			<div class="term">
-                            <h4>МЫСЛЬ</h4>
-                            <p>Определение: Не объект и не содержание. Это само действие,
-связь КО с паттернами Океана Фона, опосредованный мозгом.</p>
-                        </div>
-			<div class="term">
-                            <h4>ПАТТЕРН</h4>
-                            <p>Определение: Устойчивая конфигурация в Океане Фона. "Схема"
-или "Тема", которая была осознана.</p>
-                        </div>
-			<div class="term">
-                            <h4>СОПРОТИВЛЕНИЕ</h4>
-                            <p>Определение: "Трение", возникающее в момент связи(Мысли) в
-мозге-интерфейсе. Определяет скорость и лёгкость прохождения
-"Кольца".<br>Виды:<br>Сопротивление интереса: Низкое S. КО новый, мозг с наслаждением
-исследует все его связи.<br>Сопротивление Непонимания: Высокое S. КО чужероден, мозг с
-трудом находит хоть какие-то похожие паттерны.<br>Сопротивление Скудоумия: Высокое S.
-Фундаментальное ограничение из-за низкой "пластичности" или усталости мозга.</p>
-                        </div>
-			<div class="term">
-			    <h4>ЗАПУТАННОСТЬ(в рамках теории)</h4>
-                            <p>Определение: Сбой в манифестации Акта. 
-Состояние, когда Акт инициирован, но не может стабилизироваться в согласованное целое 
-(не может «размазаться» в чёткий овал).<br> 
-Проявления: Тревога, творческий тупик, нерешительность.</p>
-                        </div>
-		</div>
-	</section>
+            <div class="glossary">
+                <div class="term">
+                    <h4 data-key="fieldEntityTitle">ПОЛЕ-СУЩНОСТЬ</h4>
+                    <p data-key="fieldEntityText">Определение: Фундаментальный недискретный континуум.Потенциал всей возможной реальности. Не обладает формой, временем или каким-либо содержанием. Это "сырая" реальность до её осознания. Важно: ПС — это не «пространство», где плавают КО. Это потенциал для Акта Осознания.<br> Аналогия: Бесконечный непроявленный океан. (условно — одна сторона двери).</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="quantumTitle">КВАНТ ОСОЗНАНИЯ (КО)/«КОЛЬЦО»</h4>
+                    <p data-key="quantumText">Статус: Первичный акт реальности. Не процесс, а состояние.<br>Определение: Единое онтологическое событие, которое может быть описано в двух неразделимых аспектах:<br>Аспект КО: Дискретная, точечная единица осознания. («Капля»).<br>Аспект «Кольца»: Целостная, развернутая связь, актуализирующая эту единицу в опыте. («Размазанный овал» от капли).<br>Ключевой принцип: Не «КО создается в Кольце», а «КО и Кольцо — два способа говорить об одном акте осознания». <br>Между ними нет ни временного, ни причинного зазора.<br>Аналогия: Момент, когда вы уже поняли шутку («Ага!»). Ваше «Ага!» — это осознанный КО, который и есть завершенное Кольцо.<br>Невозможно найти момент «между» непониманием и пониманием.<br> Аналогия: Единичная капля, взятая из океана. Сам акт зачерпывания и есть рождение капли.</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="oceanTitle">ОКЕАН ФОНА</h4>
+                    <p data-key="oceanText">Определение: Не отдельная сущность, а локализованная и структурированная частьсамого Поля-Сущности. Динамическая область ПС, вовлечённая в устойчивую конфигурации. Не является мозгом. Мозг - это интерфейс для связи ОФ с КО.<br>Аналогия: Ведро в реке с этой же водой.</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="observerTitle">СМОТРИТЕЛЬ</h4>
+                    <p data-key="observerText">Определение: Системная настройка, алгоритм-автопилот. Управляет взаимодействием между КО, ОФ и мозгом. Стремится к эффективности, предсказывает и автоматизирует "Кольца".<br> Аналогия: "Прошивка" или операционная система процессора.</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="thoughtTitle">МЫСЛЬ</h4>
+                    <p data-key="thoughtText">Определение: Не объект и не содержание. Это само действие, связь КО с паттернами Океана Фона, опосредованный мозгом.</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="patternTitle">ПАТТЕРН</h4>
+                    <p data-key="patternText">Определение: Устойчивая конфигурация в Океане Фона. "Схема" или "Тема", которая была осознана.</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="resistanceTitle">СОПРОТИВЛЕНИЕ</h4>
+                    <p data-key="resistanceText">Определение: "Трение", возникающее в момент связи(Мысли) в мозге-интерфейсе. Определяет скорость и лёгкость прохождения "Кольца".<br>Виды:<br>Сопротивление интереса: Низкое S. КО новый, мозг с наслаждением исследует все его связи.<br>Сопротивление Непонимания: Высокое S. КО чужероден, мозг с трудом находит хоть какие-то похожие паттерны.<br>Сопротивление Скудоумия: Высокое S. Фундаментальное ограничение из-за низкой "пластичности" или усталости мозга.</p>
+                </div>
+                <div class="term">
+                    <h4 data-key="entanglementTitle">ЗАПУТАННОСТЬ(в рамках теории)</h4>
+                    <p data-key="entanglementText">Определение: Сбой в манифестации Акта. Состояние, когда Акт инициирован, но не может стабилизироваться в согласованное целое (не может «размазаться» в чёткий овал).<br> Проявления: Тревога, творческий тупик, нерешительность.</p>
+                </div>
+            </div>
+        </section>
 
         <section id="mechanism" class="container">
-            <h2>МЕХАНИЗМ ОСОЗНАНИЯ</h2>
+            <h2 data-key="mechanismTitle">МЕХАНИЗМ ОСОЗНАНИЯ</h2>
 
             <div class="mechanism-chain">
                 <div class="chain-step">
-                    <h3>ВХОД: ТРИГГЕР</h3>
-                    <p>Включенный фонарик. Начало "Кольца".</p>
+                    <h3 data-key="triggerTitle">ВХОД: ТРИГГЕР</h3>
+                    <p data-key="triggerText">Включенный фонарик. Начало "Кольца".</p>
                 </div>
                 <div class="chain-step">
-                    <h3>ЗАПУСК «КОЛЬЦА»</h3>
-                    <p>Этот триггер инициирует КО — квант осознания.</p>
+                    <h3 data-key="ringStartTitle">ЗАПУСК «КОЛЬЦА»</h3>
+                    <p data-key="ringStartText">Этот триггер инициирует КО — квант осознания.</p>
                 </div>
                 <div class="chain-step">
-                    <h3>МЫСЛЬ</h3>
-                    <p>Через мозг-интерфейс КО связывается с паттернами в Океане Фона.</p>
+                    <h3 data-key="thoughtTitle">МЫСЛЬ</h3>
+                    <p data-key="thoughtText2">Через мозг-интерфейс КО связывается с паттернами в Океане Фона.</p>
                 </div>
                 <div class="chain-step">
-                    <h3>ВЫХОД: КОЛЛАПС-ОСОЗНАНИЕ</h3>
-                    <p>Завершение "Кольца" коллапс — осознание («Я вижу предмет!»).</p>
+                    <h3 data-key="collapseTitle">ВЫХОД: КОЛЛАПС-ОСОЗНАНИЕ</h3>
+                    <p data-key="collapseText">Завершение "Кольца" коллапс — осознание («Я вижу предмет!»).</p>
                 </div>
             </div>
 
             <div class="emphasis-box">
-                <p>Фотон и КО — не одно и то же. Фотон — повод. КО — само событие осознания
-этого повода.<br>Осознание и сознание - не одно и то же. Сознание - это следствие
-осознания.</p>
+                <p data-key="photonNote">Фотон и КО — не одно и то же. Фотон — повод. КО — само событие осознания этого повода.<br>Осознание и сознание - не одно и то же. Сознание - это следствие осознания.</p>
             </div>
 
-            <h3>ПРИРОДА СОПРОТИВЛЕНИЯ (S)</h3>
-            <p>Сопротивление возникает в момент связи (Мысли) в мозге-интерфейсе. Оно может
-быть трёх видов:</p>
+            <h3 data-key="resistanceNatureTitle">ПРИРОДА СОПРОТИВЛЕНИЯ (S)</h3>
+            <p data-key="resistanceNatureText">Сопротивление возникает в момент связи (Мысли) в мозге-интерфейсе. Оно может быть трёх видов:</p>
 
             <div class="consequences-grid">
                 <div class="consequence-item">
-                    <h4>СОПРОТИВЛЕНИЕ ИНТЕРЕСА</h4>
-                    <p>КО интересный, новый. Мозг «скрипит», пытаясь рассмотреть его со
-всех сторон, найти все возможные связи в Океане. (Низкое S, желанное).</p>
+                    <h4 data-key="interestResistanceTitle">СОПРОТИВЛЕНИЕ ИНТЕРЕСА</h4>
+                    <p data-key="interestResistanceText">КО интересный, новый. Мозг «скрипит», пытаясь рассмотреть его со всех сторон, найти все возможные связи в Океане. (Низкое S, желанное).</p>
                 </div>
                 <div class="consequence-item">
-                    <h4>СОПРОТИВЛЕНИЕ НЕПОНИМАНИЯ</h4>
-                    <p>КО непонятный, чужеродный. Мозг «скрипит» от натуги, пытаясь найти
-<em>хоть какие-то</em> похожие паттерны в Океане. (Высокое S, мучительное).</p>
+                    <h4 data-key="misunderstandingResistanceTitle">СОПРОТИВЛЕНИЕ НЕПОНИМАНИЯ</h4>
+                    <p data-key="misunderstandingResistanceText">КО непонятный, чужеродный. Мозг «скрипит» от натуги, пытаясь найти <em>хоть какие-то</em> похожие паттерны в Океане. (Высокое S, мучительное).</p>
                 </div>
                 <div class="consequence-item">
-                    <h4>СОПРОТИВЛЕНИЕ СКУДОУМИЯ</h4>
-                    <p>Физиологические ограничения мозга (усталость, низкая пластичность).
-«Интерфейс» работает медленно и с ошибками. (Высокое S, фундаментальное).</p>
+                    <h4 data-key="stupidityResistanceTitle">СОПРОТИВЛЕНИЕ СКУДОУМИЯ</h4>
+                    <p data-key="stupidityResistanceText">Физиологические ограничения мозга (усталость, низкая пластичность). «Интерфейс» работает медленно и с ошибками. (Высокое S, фундаментальное).</p>
                 </div>
             </div>
         </section>
 
         <section id="consequences" class="container">
-            <h2>СЛЕДСТВИЯ — НОВАЯ ОПТИКА ДЛЯ ПСИХИЧЕСКИХ ЯВЛЕНИЙ</h2>
+            <h2 data-key="consequencesTitle">СЛЕДСТВИЯ — НОВАЯ ОПТИКА ДЛЯ ПСИХИЧЕСКИХ ЯВЛЕНИЙ</h2>
 
             <div class="consequences-grid">
                 <div class="consequence-item">
-                    <h3>ЭМОЦИЯ — ЭТО НЕ РЕГУЛЯТОР, А СИГНАЛ ЗАВЕРШЕНИЯ</h3>
-                    <p>Механизм: Мощное «Кольцо» (например, осознание угрозы) завершается
-коллапсом.</p>
-                    <p>Результат: Этот коллапс порождает эмоцию (испуг), которая является
-сигналом и одновременно модифицирует Океан Фона, создавая новый паттерн.</p>
-                    <p>Суть: Вы не пугаетесь, а потом осознаёте угрозу. Вы осознаёте
-угрозу, и это осознание — есть испуг.</p>
+                    <h3 data-key="emotionTitle">ЭМОЦИЯ — ЭТО НЕ РЕГУЛЯТОР, А СИГНАЛ ЗАВЕРШЕНИЯ</h3>
+                    <p data-key="emotionMechanism">Механизм: Мощное «Кольцо» (например, осознание угрозы) завершается коллапсом.</p>
+                    <p data-key="emotionResult">Результат: Этот коллапс порождает эмоцию (испуг), которая является сигналом и одновременно модифицирует Океан Фона, создавая новый паттерн.</p>
+                    <p data-key="emotionEssence">Суть: Вы не пугаетесь, а потом осознаёте угрозу. Вы осознаёте угрозу, и это осознание — есть испуг.</p>
                 </div>
 
                 <div class="consequence-item">
-                    <h3>СУБЪЕКТИВНОЕ ВРЕМЯ — ЭТО МЕРА СОПРОТИВЛЕНИЯ МЫСЛИ</h3>
-                    <p>Механизм: В состоянии «потока» (высокий Интерес, сложная задача)
-сопротивление (`S`) высоко, но желанно. КО «задерживается» в процессе связи, проходя меньше
-«Колец» в единицу астрономического времени. Время «сжимается».</p>
-                    <p>Суть: Часы тикают равномерно. Плотность актов осознания на их
-отрезке — разная.</p>
+                    <h3 data-key="timeTitle">СУБЪЕКТИВНОЕ ВРЕМЯ — ЭТО МЕРА СОПРОТИВЛЕНИЯ МЫСЛИ</h3>
+                    <p data-key="timeMechanism">Механизм: В состоянии «потока» (высокий Интерес, сложная задача) сопротивление (`S`) высоко, но желанно. КО «задерживается» в процессе связи, проходя меньше «Колец» в единицу астрономического времени. Время «сжимается».</p>
+                    <p data-key="timeEssence">Суть: Часы тикают равномерно. Плотность актов осознания на их отрезке — разная.</p>
                 </div>
 
                 <div class="consequence-item">
-                    <h3>ТВОРЧЕСКИЙ ТУПИК — ЭТО ЗАЦИКЛЕННОСТЬ «СМОТРИТЕЛЯ»</h3>
-                    <p>Механизм: «Смотритель» пытается провести КО по старым «Тоннелям»
-(паттернам), которые не работают. Сопротивление (`S`) максимально. «Кольцо» не может
-замкнуться — это состояние «Запутанности».</p>
-                    <p>Решение (из теории): Не упрощать задачу, а резко усложнить её
-(«Выход за Границу»). Это ломает старые паттерны, вынуждая систему найти новые.</p>
-                    <p>Суть: Креативность — это не generating нового из ничего, а сброс
-ригидных фильтров, мешающих новым связям установиться.</p>
+                    <h3 data-key="creativeBlockTitle">ТВОРЧЕСКИЙ ТУПИК — ЭТО ЗАЦИКЛЕННОСТЬ «СМОТРИТЕЛЯ»</h3>
+                    <p data-key="creativeBlockMechanism">Механизм: «Смотритель» пытается провести КО по старым «Тоннелям» (паттернам), которые не работают. Сопротивление (`S`) максимально. «Кольцо» не может замкнуться — это состояние «Запутанности».</p>
+                    <p data-key="creativeBlockSolution">Решение (из теории): Не упрощать задачу, а резко усложнить её («Выход за Границу»). Это ломает старые паттерны, вынуждая систему найти новые.</p>
+                    <p data-key="creativeBlockEssence">Суть: Креативность — это не generating нового из ничего, а сброс ригидных фильтров, мешающих новым связям установиться.</p>
                 </div>
 
                 <div class="consequence-item">
-                    <h3>ПАМЯТЬ — ЭТО НЕ ЗАПИСЬ, А РЕКОНСТРУКЦИЯ</h3>
-                    <p>Механизм: Воспоминание — это не извлечение файла. Это новый акт
-осознания — связывание КО с паттернами в Океане Фона <em>здесь и сейчас</em>.</p>
-                    <p>Результат: Память каждый раз перезаписывается в момент вспоминания,
-что объясняет её изменчивость.</p>
+                    <h3 data-key="memoryTitle">ПАМЯТЬ — ЭТО НЕ ЗАПИСЬ, А РЕКОНСТРУКЦИЯ</h3>
+                    <p data-key="memoryMechanism">Механизм: Воспоминание — это не извлечение файла. Это новый акт осознания — связывание КО с паттернами в Океане Фона <em>здесь и сейчас</em>.</p>
+                    <p data-key="memoryResult">Результат: Память каждый раз перезаписывается в момент вспоминания, что объясняет её изменчивость.</p>
                 </div>
             </div>
         </section>
 
         <section id="practice" class="container">
-            <h2>ПРАКТИКА — ИНСТРУМЕНТЫ УПРАВЛЕНИЯ РЕАЛЬНОСТЬЮ</h2>
-            <p class="emphasis-box">Вся ценность теории — в её силе что-то изменить.
-Понимание механизма «Кольца» даёт вам не просто объяснения, а рычаги. Вот они.</p>
-			<h2><strong>Внимание:</strong></h2> 
-			<p class="emphasis-box"><br>Этот инструмент — не медицинская диагностика и не замена терапии.<br>
-				Это система метафор для самонаблюдения.<br>
-				Если вы испытываете острые страдания, суицидальные мысли, панические атаки или подозреваете у себя психическое расстройство — 
-				немедленно обратитесь к специалисту (психотерапевту, психиатру).<br>
-				Нижеследующая информация предназначена только для ситуаций повседневного стресса, выгорания или творческих тупиков.</p>
+            <h2 data-key="practiceTitle">ПРАКТИКА — ИНСТРУМЕНТЫ УПРАВЛЕНИЯ РЕАЛЬНОСТЬЮ</h2>
+            <p class="emphasis-box" data-key="practiceNote">Вся ценность теории — в её силе что-то изменить. Понимание механизма «Кольца» даёт вам не просто объяснения, а рычаги. Вот они.</p>
+            
+            <h2><strong data-key="attentionWord">Внимание:</strong></h2>
+            <p class="emphasis-box" data-key="practiceWarning"><br>Этот инструмент — не медицинская диагностика и не замена терапии.<br>
+                Это система метафор для самонаблюдения.<br>
+                Если вы испытываете острые страдания, суицидальные мысли, панические атаки или подозреваете у себя психическое расстройство — 
+                немедленно обратитесь к специалисту (психотерапевту, психиатру).<br>
+                Нижеследующая информация предназначена только для ситуаций повседневного стресса, выгорания или творческих тупиков.</p>
+            
             <div class="tools-grid">
                 <div class="tool">
-                    <h3>ДИАГНОСТИКА: «КОМПАС СОСТОЯНИЯ»</h3>
+                    <h3 data-key="diagnosisTitle">ДИАГНОСТИКА: «КОМПАС СОСТОЯНИЯ»</h3>
                     <div class="step" id="step-diagnosis">
                         <div class="step-number"></div>
 
-                        <p><strong>Зачем?</strong><br> Чтобы определить, в какой «ловушке»
-вы находитесь и какой инструмент применить.</p>
+                        <p data-key="diagnosisWhy"><strong>Зачем?</strong><br> Чтобы определить, в какой «ловушке» вы находитесь и какой инструмент применить.</p>
 
                         <div class="checklist">
                             <!-- Вопрос 1: Время -->
                             <div class="check-item">
-                                <h4>1. ВОПРОС О ВРЕМЕНИ: «Как сейчас течёт время?»</h4>
+                                <h4 data-key="timeQuestion">1. ВОПРОС О ВРЕМЕНИ: «Как сейчас течёт время?»</h4>
                                 <div class="option-group">
-                                    <label><input type="radio" name="time"
-value="energy_depletion" onchange="updateCompass()">Тянется мучительно</label>
-                                    <label><input type="radio" name="time" value="flow"
-onchange="updateCompass()">Летит незаметно</label>
-                                    <label><input type="radio" name="time"
-value="entanglement" onchange="updateCompass()">Искажается, скачет</label>
-                                    <label><input type="radio" name="time" value="stable"
-onchange="updateCompass()">Идёт нормально, нейтрально</label>
+                                    <label><input type="radio" name="time" value="energy_depletion" onchange="updateCompass()"><span data-key="timeOption1">Тянется мучительно</span></label>
+                                    <label><input type="radio" name="time" value="flow" onchange="updateCompass()"><span data-key="timeOption2">Летит незаметно</span></label>
+                                    <label><input type="radio" name="time" value="entanglement" onchange="updateCompass()"><span data-key="timeOption3">Искажается, скачет</span></label>
+                                    <label><input type="radio" name="time" value="stable" onchange="updateCompass()"><span data-key="timeOption4">Идёт нормально, нейтрально</span></label>
                                 </div>
                             </div>
 
                             <!-- Вопрос 2: Тело -->
                             <div class="check-item">
-                                <h4>2. ВОПРОС О ТЕЛЕ: «Что чувствует тело?»</h4>
+                                <h4 data-key="bodyQuestion">2. ВОПРОС О ТЕЛЕ: «Что чувствует тело?»</h4>
                                 <div class="option-group">
-                                    <label><input type="radio" name="body"
-value="tight_control" onchange="updateCompass()">Напряжение, скованность</label>
-                                    <label><input type="radio" name="body"
-value="energy_depletion" onchange="updateCompass()">Усталость, тяжесть, истощение</label>
-                                    <label><input type="radio" name="body" value="resource"
-onchange="updateCompass()">Лёгкость, энергия, тонус</label>
-                                    <label><input type="radio" name="body"
-value="entanglement" onchange="updateCompass()">Дереализация, онемение,
-"выключенность"</label>
+                                    <label><input type="radio" name="body" value="tight_control" onchange="updateCompass()"><span data-key="bodyOption1">Напряжение, скованность</span></label>
+                                    <label><input type="radio" name="body" value="energy_depletion" onchange="updateCompass()"><span data-key="bodyOption2">Усталость, тяжесть, истощение</span></label>
+                                    <label><input type="radio" name="body" value="resource" onchange="updateCompass()"><span data-key="bodyOption3">Лёгкость, энергия, тонус</span></label>
+                                    <label><input type="radio" name="body" value="entanglement" onchange="updateCompass()"><span data-key="bodyOption4">Дереализация, онемение, "выключенность"</span></label>
                                 </div>
                             </div>
 
                             <!-- Вопрос 3: Задача -->
                             <div class="check-item">
-                                <h4>3. ВОПРОС О ЗАДАЧЕ: «Что происходит с задачей?»</h4>
+                                <h4 data-key="taskQuestion">3. ВОПРОС О ЗАДАЧЕ: «Что происходит с задачей?»</h4>
                                 <div class="option-group">
-                                    <label><input type="radio" name="task"
-value="tight_control" onchange="updateCompass()">Не могу начать, прокрастинация</label>
-                                    <label><input type="radio" name="task"
-value="entanglement" onchange="updateCompass()">Кручусь на месте, много мыслей, но нет
-результата</label>
-                                    <label><input type="radio" name="task"
-value="energy_depletion" onchange="updateCompass()">Нет интереса, апатия, всё
-безразлично</label>
-                                    <label><input type="radio" name="task" value="resource"
-onchange="updateCompass()">Сфокусирован, решается легко, состояние потока</label>
+                                    <label><input type="radio" name="task" value="tight_control" onchange="updateCompass()"><span data-key="taskOption1">Не могу начать, прокрастинация</span></label>
+                                    <label><input type="radio" name="task" value="entanglement" onchange="updateCompass()"><span data-key="taskOption2">Кручусь на месте, много мыслей, но нет результата</span></label>
+                                    <label><input type="radio" name="task" value="energy_depletion" onchange="updateCompass()"><span data-key="taskOption3">Нет интереса, апатия, всё безразлично</span></label>
+                                    <label><input type="radio" name="task" value="resource" onchange="updateCompass()"><span data-key="taskOption4">Сфокусирован, решается легко, состояние потока</span></label>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="compass-result" style="margin-top: 2rem; padding: 1.5rem;
-background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
-                            <h4>ДИАГНОЗ СИСТЕМЫ:</h4>
+                        <div id="compass-result" style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
+                            <h4 data-key="diagnosisSystem">ДИАГНОЗ СИСТЕМЫ:</h4>
                             <div id="diagnosis-content">
                                 <p id="diagnosis-state"></p>
                                 <p id="diagnosis-description"></p>
@@ -823,191 +761,300 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
                             </div>
                         </div>
                     </div>
-                    <p>Суть: Вы получаете диагноз, а не догадку.</p>
+                    <p data-key="diagnosisEssence">Суть: Вы получаете диагноз, а не догадку.</p>
                 </div>
 
                 <div class="tool">
-                    <h3>ИНСТРУМЕНТ №1: «ТОНКАЯ НАСТРОЙКА СМОТРИТЕЛЯ»</h3>
-                    <p>Зачем?<br> Для выхода из состояния «Зажатый контроль», когда вы
-зациклены и перегружены.</p>
-                    <p>Как?<br> 1. Сознательно отступите.<br> 2. Займите мозг рутиной
-(помойте чашку, пройдитесь).<br> 3. Вернитесь к задаче.</p>
-                    <p>Суть: Вы не «расслабляетесь». Вы принудительно перезагружаете
-системный сбой («Смотрителя»).</p>
+                    <h3 data-key="tool1Title">ИНСТРУМЕНТ №1: «ТОНКАЯ НАСТРОЙКА СМОТРИТЕЛЯ»</h3>
+                    <p data-key="tool1Why">Зачем?<br> Для выхода из состояния «Зажатый контроль», когда вы зациклены и перегружены.</p>
+                    <p data-key="tool1How">Как?<br> 1. Сознательно отступите.<br> 2. Займите мозг рутиной (помойте чашку, пройдитесь).<br> 3. Вернитесь к задаче.</p>
+                    <p data-key="tool1Essence">Суть: Вы не «расслабляетесь». Вы принудительно перезагружаете системный сбой («Смотрителя»).</p>
                 </div>
 
                 <div class="tool">
-                    <h3>ИНСТРУМЕНТ №2: «ВЫХОД ЗА ГРАНЬ»</h3>
-                    <p>Зачем?<br> Для решения нерешаемых задач, прорыва в творчестве,
-выхода из «Смыслового вакуума».</p>
-                    <p>Как?<br> 1. Признайте тупик.<br> 2. Создайте себе абсурдно сложную,
-качественно иную задачу.<br> 3. Штурмуйте её 15-20 минут.<br> 4. Вернитесь к исходной
-проблеме.</p>
-                    <p>Суть: Вы не «ищете ответ». Вы сознательно создаёте кризис, который
-ломает старые шаблоны и открывает новые пути.</p>
+                    <h3 data-key="tool2Title">ИНСТРУМЕНТ №2: «ВЫХОД ЗА ГРАНЬ»</h3>
+                    <p data-key="tool2Why">Зачем?<br> Для решения нерешаемых задач, прорыва в творчестве, выхода из «Смыслового вакуума».</p>
+                    <p data-key="tool2How">Как?<br> 1. Признайте тупик.<br> 2. Создайте себе абсурдно сложную, качественно иную задачу.<br> 3. Штурмуйте её 15-20 минут.<br> 4. Вернитесь к исходной проблеме.</p>
+                    <p data-key="tool2Essence">Суть: Вы не «ищете ответ». Вы сознательно создаёте кризис, который ломает старые шаблоны и открывает новые пути.</p>
                 </div>
 
-		<div class="tool">
-                    <h3>ИНСТРУМЕНТ №3: «ЭНЕРГОСБЕРЕГАЮЩИЙ РЕЖИМ»</h3>
-                    <p>Зачем?<br> Для экстренного восстановления энергии системы(Е_системы)
-при состоянии "Энергетическое истощение", когда вы чувствуете усталость, время тянется, а
-интерес к чему-либо пропадает. </p>
-                    <p>Как?<br> 1. Отдых, сон.<br>2. Снижение `Шум_Контекста` (выключить
-уведомления).<br>3. Простые, автоматические задачи.</p>
-                    <p>Суть: это не просто "отдых". Это- принудительное отключение
-Смотрителя и снижение Поток_КО до минимального уровня, чтобы система перешла в режим
-фонового восстановления.</p>
+                <div class="tool">
+                    <h3 data-key="tool3Title">ИНСТРУМЕНТ №3: «ЭНЕРГОСБЕРЕГАЮЩИЙ РЕЖИМ»</h3>
+                    <p data-key="tool3Why">Зачем?<br> Для экстренного восстановления энергии системы(Е_системы) при состоянии "Энергетическое истощение", когда вы чувствуете усталость, время тянется, а интерес к чему-либо пропадает.</p>
+                    <p data-key="tool3How">Как?<br> 1. Отдых, сон.<br>2. Снижение `Шум_Контекста` (выключить уведомления).<br>3. Простые, автоматические задачи.</p>
+                    <p data-key="tool3Essence">Суть: это не просто "отдых". Это- принудительное отключение Смотрителя и снижение Поток_КО до минимального уровня, чтобы система перешла в режим фонового восстановления.</p>
                 </div>
             </div>
         </section>
 
-	<section id="formulas" class="container">
-            <h2>МАТЕМАТИЧЕСКИЙ АППАРАТ СИСТЕМЫ</h2>
+        <section id="formulas" class="container">
+            <h2 data-key="formulasTitle">МАТЕМАТИЧЕСКИЙ АППАРАТ СИСТЕМЫ</h2>
 
             <div class="formula-grid">
                 <div class="formula">
-                    <h3>ЭНЕРГИЯ СИСТЕМЫ</h3>
-                    <div class="formula-equation">E<sub>сис</sub> = (Поток<sub>КО</sub> ×
-Свобода<sub>Смотрителя</sub>) ÷ (Сопротивление<sub>Океана</sub> × Шум<sub>Контекста</sub>)
-</div>
-                    <div class="formula-params">
-                        Определяет общую эффективность системы. Высокая E<sub>сис</sub> —
-состояние «потока».
+                    <h3 data-key="energyFormulaTitle">ЭНЕРГИЯ СИСТЕМЫ</h3>
+                    <div class="formula-equation" data-key="energyFormula">E<sub>сис</sub> = (Поток<sub>КО</sub> × Свобода<sub>Смотрителя</sub>) ÷ (Сопротивление<sub>Океана</sub> × Шум<sub>Контекста</sub>)</div>
+                    <div class="formula-params" data-key="energyExplanation">
+                        Определяет общую эффективность системы. Высокая E<sub>сис</sub> — состояние «потока».
                     </div>
                 </div>
 
                 <div class="formula">
-                    <h3>СУБЪЕКТИВНОЕ ВРЕМЯ</h3>
-                    <div class="formula-equation">Δt = (K × F × W) ÷ (I × S × Int × C)
-</div>
-                    <div class="formula-params">
-                        Параметры: K-константа, F-частота КО, W-волевое усилие, I-
-интеллектуальная сложность, S-глубинное сопротивление, Int-интерес, C- концентрация.<br>
-                        Время «летит» (малое Δt) при высокой плотности КО. Время «тянется»
-(большое Δt) при низкой плотности КО.
+                    <h3 data-key="timeFormulaTitle">СУБЪЕКТИВНОЕ ВРЕМЯ</h3>
+                    <div class="formula-equation" data-key="timeFormula">Δt = (K × F × W) ÷ (I × S × Int × C)</div>
+                    <div class="formula-params" data-key="timeFormulaParams">
+                        Параметры: K-константа, F-частота КО, W-волевое усилие, I- интеллектуальная сложность, S-глубинное сопротивление, Int-интерес, C- концентрация.<br>
+                        Время «летит» (малое Δt) при высокой плотности КО. Время «тянется» (большое Δt) при низкой плотности КО.
                     </div>
                 </div>
 
                 <div class="formula">
-                    <h3>СОПРОТИВЛЕНИЕ ОКЕАНА</h3>
-                    <div class="formula-equation">S = I × S × (1 ÷ Int)</div>
-                    <div class="formula-params">
-                        Компоненты: I (интеллектуальная сложность паттерна), S (глубинное
-сопротивление шаблонам), Int (интерес/вовлечённость как понижающий коэффициент).
+                    <h3 data-key="resistanceFormulaTitle">СОПРОТИВЛЕНИЕ ОКЕАНА</h3>
+                    <div class="formula-equation" data-key="resistanceFormula">S = I × S × (1 ÷ Int)</div>
+                    <div class="formula-params" data-key="resistanceFormulaParams">
+                        Компоненты: I (интеллектуальная сложность паттерна), S (глубинное сопротивление шаблонам), Int (интерес/вовлечённость как понижающий коэффициент).
                     </div>
                 </div>
-
             </div>
         </section>
 
-		<section id="science-bridge" class="container">
-    		<h2>НАУЧНЫЙ МОСТ: ТЕОРИЯ КО И СОВРЕМЕННЫЕ ИССЛЕДОВАНИЯ</h2>
+        <section id="science-bridge" class="container">
+            <h2 data-key="scienceBridgeTitle">НАУЧНЫЙ МОСТ: ТЕОРИЯ КО И СОВРЕМЕННЫЕ ИССЛЕДОВАНИЯ</h2>
     
-			    <div class="emphasis-box">
-			        <p>Теория Квантового Осознания не существует в вакууме. Вот как она соотносится с современными научными направлениями:</p>
-			    </div>
-			
-			    <div class="grid-2">
-			        <div>
-			            <h3>🌀 ИНТЕГРИРОВАННАЯ ТЕОРИЯ ИНФОРМАЦИИ (IIT)</h3>
-			            <div class="term">
-			                <h4>СХОДСТВА:</h4>
-			                <p>• <strong>Сознание как фундаментальное свойство</strong> - в IIT сознание возникает из интеграции информации, в Теории КО - из актов "Кольца"</p>
-			                <p>• <strong>Нередуктивный подход</strong> - обе теории не сводят сознание к нейронам</p>
-			                <p>• <strong>Структурное соответствие</strong> - качество опыта определяется структурой системы</p>
-			            </div>
-			            <div class="term">
-			                <h4>ОТЛИЧИЯ:</h4>
-			                <p>• IIT описывает состояния, Теория КО - процессы</p>
-			                <p>• "Кольца" vs "Φ-функция" - разные математические аппараты</p>
-			            </div>
-			        </div>
-			
-			        <div>
-			            <h3>⚛️ КВАНТОВЫЕ ТЕОРИИ СОЗНАНИЯ</h3>
-			            <div class="term">
-			                <h4>ПЕНРОУЗ-ХАМЕРОФФ (Orch-OR):</h4>
-			                <p>• <strong>Коллапс волновой функции</strong> - общая отправная точка</p>
-			                <p>• Но: они ищут <strong>где</strong> (микротрубочки), мы описываем <strong>как</strong> (архитектуру)</p>
-			                <p>• Теория КО даёт ответ на "трудную проблему", который избегает редукции</p>
-			            </div>
-			        </div>
-			    </div>
-			
-			    <div class="grid-2" style="margin-top: 3rem;">
-			        <div>
-			            <h3>🧠 КОГНИТИВНАЯ НАУКА</h3>
-			            <div class="term">
-			                <h4>ПОДТВЕРЖДАЕМЫЕ ЯВЛЕНИЯ:</h4>
-			                <p>• <strong>Субъективное время</strong> - исследования показывают зависимость от внимания и эмоций</p>
-			                <p>• <strong>Реконструкция памяти</strong> - подтверждено нейронаукой</p>
-			                <p>• <strong>Эффект потока</strong> (Чиксентмихайи) - соответствует состоянию "ресурс"</p>
-			            </div>
-			        </div>
-			
-			        <div>
-			            <h3>🔬 ПРЕДСКАЗАНИЯ ДЛЯ ИССЛЕДОВАНИЙ</h3>
-			            <div class="term">
-			                <h4>ПРОВЕРЯЕМЫЕ ГИПОТЕЗЫ:</h4>
-			                <p>• При состоянии "Запутанность" должна наблюдаться десинхронизация нейронных сетей</p>
-			                <p>• "Тонкая настройка Смотрителя" должна вызывать перераспределение активности от префронтальной коры к сенсомоторным зонам</p>
-			                <p>• "Выход за Грань" должен сопровождаться всплеском нейропластичности</p>
-			            </div>
-			        </div>
-			    </div>
-			
-			    <div class="emphasis-box" style="margin-top: 3rem;">
-			        <h4>ТАБЛИЦА СООТВЕТСТВИЙ</h4>
-			        <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
-			            <tr style="background: rgba(0,109,109,0.1);">
-			                <th style="padding: 1rem; text-align: left; border: 1px solid #006d6d;">ЯВЛЕНИЕ</th>
-			                <th style="padding: 1rem; text-align: left; border: 1px solid #006d6d;">ТЕОРИЯ КО</th>
-			                <th style="padding: 1rem; text-align: left; border: 1px solid #006d6d;">НАУЧНОЕ ОБЪЯСНЕНИЕ</th>
-			            </tr>
-			            <tr>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Фантомные боли</td>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Конфликт паттернов ОФ</td>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Нейропластичность соматосенсорной коры</td>
-			            </tr>
-			            <tr style="background: rgba(0,109,109,0.05);">
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Субъективное время</td>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Плотность "Колец"</td>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Влияние дофамина и внимания на восприятие времени</td>
-			            </tr>
-			            <tr>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Творческий инсайт</td>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Сброс ригидных паттернов</td>
-			                <td style="padding: 1rem; border: 1px solid #006d6d;">Активация правого полушария и СЗБК</td>
-			            </tr>
-			        </table>
-			    </div>
-			
-			    <div class="term" style="margin-top: 3rem;">
-			        <h4>ВЫВОД:</h4>
-			        <p>Теория КО не противоречит научным данным, а предлагает новый язык описания тех же явлений. Она заполняет пробел между нейробиологией и феноменологией, предлагая рабочую модель там, где наука пока ограничивается корреляциями.</p>
-			        <p style="margin-top: 1rem;">Теория не заменяет науку, а дополняет её архитектурной картой.</p>
-			    </div>
-			</section>
+            <div class="emphasis-box">
+                <p data-key="scienceBridgeIntro">Теория Квантового Осознания не существует в вакууме. Вот как она соотносится с современными научными направлениями:</p>
+            </div>
+        
+            <div class="grid-2">
+                <div>
+                    <h3 data-key="iitTitle">🌀 ИНТЕГРИРОВАННАЯ ТЕОРИЯ ИНФОРМАЦИИ (IIT)</h3>
+                    <div class="term">
+                        <h4 data-key="iitSimilaritiesTitle">СХОДСТВА:</h4>
+                        <p data-key="iitSimilarity1">• <strong>Сознание как фундаментальное свойство</strong> - в IIT сознание возникает из интеграции информации, в Теории КО - из актов "Кольца"</p>
+                        <p data-key="iitSimilarity2">• <strong>Нередуктивный подход</strong> - обе теории не сводят сознание к нейронам</p>
+                        <p data-key="iitSimilarity3">• <strong>Структурное соответствие</strong> - качество опыта определяется структурой системы</p>
+                    </div>
+                    <div class="term">
+                        <h4 data-key="iitDifferencesTitle">ОТЛИЧИЯ:</h4>
+                        <p data-key="iitDifference1">• IIT описывает состояния, Теория КО - процессы</p>
+                        <p data-key="iitDifference2">• "Кольца" vs "Φ-функция" - разные математические аппараты</p>
+                    </div>
+                </div>
+        
+                <div>
+                    <h3 data-key="quantumTheoriesTitle">⚛️ КВАНТОВЫЕ ТЕОРИИ СОЗНАНИЯ</h3>
+                    <div class="term">
+                        <h4 data-key="penroseTitle">ПЕНРОУЗ-ХАМЕРОФФ (Orch-OR):</h4>
+                        <p data-key="penrosePoint1">• <strong>Коллапс волновой функции</strong> - общая отправная точка</p>
+                        <p data-key="penrosePoint2">• Но: они ищут <strong>где</strong> (микротрубочки), мы описываем <strong>как</strong> (архитектуру)</p>
+                        <p data-key="penrosePoint3">• Теория КО даёт ответ на "трудную проблему", который избегает редукции</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="grid-2" style="margin-top: 3rem;">
+                <div>
+                    <h3 data-key="cognitiveScienceTitle">🧠 КОГНИТИВНАЯ НАУКА</h3>
+                    <div class="term">
+                        <h4 data-key="cognitiveConfirmedTitle">ПОДТВЕРЖДАЕМЫЕ ЯВЛЕНИЯ:</h4>
+                        <p data-key="cognitiveConfirmed1">• <strong>Субъективное время</strong> - исследования показывают зависимость от внимания и эмоций</p>
+                        <p data-key="cognitiveConfirmed2">• <strong>Реконструкция памяти</strong> - подтверждено нейронаукой</p>
+                        <p data-key="cognitiveConfirmed3">• <strong>Эффект потока</strong> (Чиксентмихайи) - соответствует состоянию "ресурс"</p>
+                    </div>
+                </div>
+        
+                <div>
+                    <h3 data-key="predictionsTitle">🔬 ПРЕДСКАЗАНИЯ ДЛЯ ИССЛЕДОВАНИЙ</h3>
+                    <div class="term">
+                        <h4 data-key="predictionsHypothesesTitle">ПРОВЕРЯЕМЫЕ ГИПОТЕЗЫ:</h4>
+                        <p data-key="prediction1">• При состоянии "Запутанность" должна наблюдаться десинхронизация нейронных сетей</p>
+                        <p data-key="prediction2">• "Тонкая настройка Смотрителя" должна вызывать перераспределение активности от префронтальной коры к сенсомоторным зонам</p>
+                        <p data-key="prediction3">• "Выход за Грань" должен сопровождаться всплеском нейропластичности</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="emphasis-box" style="margin-top: 3rem;">
+                <h4 data-key="correspondenceTableTitle">ТАБЛИЦА СООТВЕТСТВИЙ</h4>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <tr style="background: rgba(0,109,109,0.1);">
+                        <th style="padding: 1rem; text-align: left; border: 1px solid #006d6d;" data-key="phenomenonColumn">ЯВЛЕНИЕ</th>
+                        <th style="padding: 1rem; text-align: left; border: 1px solid #006d6d;" data-key="theoryColumn">ТЕОРИЯ КО</th>
+                        <th style="padding: 1rem; text-align: left; border: 1px solid #006d6d;" data-key="scienceColumn">НАУЧНОЕ ОБЪЯСНЕНИЕ</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="phantomPains">Фантомные боли</td>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="phantomTheory">Конфликт паттернов ОФ</td>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="phantomScience">Нейропластичность соматосенсорной коры</td>
+                    </tr>
+                    <tr style="background: rgba(0,109,109,0.05);">
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="subjectiveTimeRow">Субъективное время</td>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="subjectiveTheory">Плотность "Колец"</td>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="subjectiveScience">Влияние дофамина и внимания на восприятие времени</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="creativeInsight">Творческий инсайт</td>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="creativeTheory">Сброс ригидных паттернов</td>
+                        <td style="padding: 1rem; border: 1px solid #006d6d;" data-key="creativeScience">Активация правого полушария и СЗБК</td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="term" style="margin-top: 3rem;">
+                <h4 data-key="scienceConclusionTitle">ВЫВОД:</h4>
+                <p data-key="scienceConclusion1">Теория КО не противоречит научным данным, а предлагает новый язык описания тех же явлений. Она заполняет пробел между нейробиологией и феноменологией, предлагая рабочую модель там, где наука пока ограничивается корреляциями.</p>
+                <p style="margin-top: 1rem;" data-key="scienceConclusion2">Теория не заменяет науку, а дополняет её архитектурной картой.</p>
+            </div>
+        </section>
 
         <section class="container">
             <div class="conclusion">
-                <h2>ЗАКЛЮЧЕНИЕ МАНИФЕСТА</h2>
-                <p>«Эта теория — не "истина в последней инстанции". Это — новая оптика.
-Карта, которая делает внутренний ландшафт понятным и управляемым.</p>
-                <p>Вы не обязаны верить в "Кванты Осознания". Просто попробуйте
-инструменты. Если они сработают — вы уже пользуетесь теорией, понимаете вы её до конца или
-нет.</p>
-                <p>Дверь открыта. Проход — за вами.</p>
+                <h2 data-key="conclusionTitle">ЗАКЛЮЧЕНИЕ МАНИФЕСТА</h2>
+                <p data-key="conclusion1">«Эта теория — не "истина в последней инстанции". Это — новая оптика. Карта, которая делает внутренний ландшафт понятным и управляемым.</p>
+                <p data-key="conclusion2">Вы не обязаны верить в "Кванты Осознания". Просто попробуйте инструменты. Если они сработают — вы уже пользуетесь теорией, понимаете вы её до конца или нет.</p>
+                <p data-key="conclusion3">Дверь открыта. Проход — за вами.</p>
             </div>
         </section>
     </main>
 
     <footer class="container">
-        <p>Теория Квантового Осознания © 2025 | Новая оптика для понимания реальности</p>
-		<p>Концепция в разработке | <a href="https://t.me/+W2MEnUEi_eQyNDAy" style="color: #00b3b3; text decoration: none;">Лаборатория</a></p>
+        <p data-key="footerText">Теория Квантового Осознания © 2025 | Новая оптика для понимания реальности</p>
+        <p><span data-key="footerLab">Концепция в разработке | </span><a href="https://t.me/+W2MEnUEi_eQyNDAy" style="color: #00b3b3; text-decoration: none;" data-key="labLink">Лаборатория</a></p>
     </footer>
 
     <script>
+        // ===== СИСТЕМА ПЕРЕВОДА =====
+        let currentLang = 'ru';
+        let translations = {};
+
+        // Загрузка переводов
+        async function loadTranslations(lang) {
+            try {
+                const response = await fetch(`js/lang-${lang}.json`);
+                translations = await response.json();
+                currentLang = lang;
+                applyTranslations();
+                updateLanguageSwitcher();
+                saveLanguagePreference();
+            } catch (error) {
+                console.error('Error loading translations:', error);
+            }
+        }
+
+        // Применение переводов ко всем элементам
+        function applyTranslations() {
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[key] !== undefined) {
+                    // Для элементов с HTML
+                    if (element.tagName === 'P' || element.tagName === 'H1' || 
+                        element.tagName === 'H2' || element.tagName === 'H3' || 
+                        element.tagName === 'H4' || element.tagName === 'LI' ||
+                        element.tagName === 'TD' || element.tagName === 'TH' ||
+                        element.innerHTML.includes('<')) {
+                        element.innerHTML = translations[key];
+                    } else {
+                        element.textContent = translations[key];
+                    }
+                }
+            });
+            
+            // Обновляем атрибут lang
+            document.documentElement.lang = currentLang;
+            
+            // Обновляем title
+            document.title = translations.siteTitle || document.title;
+        }
+
+        // Обновление переключателя языка
+        function updateLanguageSwitcher() {
+            const switcher = document.getElementById('language-switcher');
+            if (switcher) {
+                if (currentLang === 'ru') {
+                    switcher.textContent = translations.switchToEnglish || 'English';
+                } else {
+                    switcher.textContent = translations.switchToRussian || 'Русский';
+                }
+            }
+        }
+
+        // Переключение языка
+        function switchLanguage(lang) {
+            if (lang !== currentLang) {
+                loadTranslations(lang);
+            } else {
+                // Переключаем между ru/en
+                const newLang = currentLang === 'ru' ? 'en' : 'ru';
+                loadTranslations(newLang);
+            }
+        }
+
+        // Сохранение предпочтения в localStorage
+        function saveLanguagePreference() {
+            localStorage.setItem('preferredLanguage', currentLang);
+        }
+
+        // Загрузка сохраненного языка
+        function loadSavedLanguage() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language.substring(0, 2);
+            
+            // Определяем язык по приоритету: сохраненный > браузер > русский
+            const lang = savedLang || (browserLang === 'en' ? 'en' : 'ru');
+            loadTranslations(lang);
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSavedLanguage();
+            
+            // Инициализация observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // ===== СУЩЕСТВУЮЩИЕ ФУНКЦИИ (без изменений) =====
+        function showTimeDemo() {
+            const result = document.getElementById('demo-result');
+            const paramText = currentLang === 'ru' ? 'параметр' : 'parameter';
+            result.innerHTML = `
+                <p>${currentLang === 'ru' ? 'Эксперимент с восприятием времени:' : 'Time perception experiment:'}</p>
+                <p>${currentLang === 'ru' ? 'Вспомните момент, когда вы полностью погружены в интересную задачу (поток).' : 'Recall a moment when you\'re completely immersed in an interesting task (flow).'}</p>
+                <p>${currentLang === 'ru' ? 'Теперь вспомните очередь или скучное ожидание.' : 'Now recall a queue or boring wait.'}</p>
+                <p>↓</p>
+                <p>${currentLang === 'ru' ? 'Это демонстрация параметра' : 'This demonstrates the parameter'} <span class="param-tag">Δt</span> — ${currentLang === 'ru' ? 'субъективного времени, которое зависит от плотности процессов осознания.' : 'subjective time that depends on awareness process density.'}</p>
+            `;
+        }
+
+        function showAttentionDemo() {
+            const result = document.getElementById('demo-result');
+            result.innerHTML = `
+                <p>${currentLang === 'ru' ? 'Эксперимент с вниманием:' : 'Attention experiment:'}</p>
+                <p>${currentLang === 'ru' ? 'Осознайте прямо сейчас: <em>температуру воздуха на коже</em>.' : 'Aware right now: <em>air temperature on your skin</em>.'}</p>
+                <p>${currentLang === 'ru' ? 'А теперь — <em>звуки на заднем плане</em>.' : 'And now — <em>sounds in the background</em>.'}</p>
+                <p>↓</p>
+                <p>${currentLang === 'ru' ? 'Каждое такое переключение — одно «Кольцо». Вы только что прошли два полных цикла осознания.' : 'Each such switch is one "Ring". You\'ve just completed two full awareness cycles.'}</p>
+            `;
+        }
+
+        function startTheoryJourney() {
+            document.getElementById('prologue').scrollIntoView({behavior: 'smooth'});
+        }
+
         // ★★★ ОБНОВЛЁННАЯ ЛОГИКА РАСЧЁТА - ТОЧНАЯ КОПИЯ GOOGLE FORMS ★★★
         function updateCompass() {
             const time = document.querySelector('input[name="time"]:checked')?.value;
@@ -1038,22 +1085,22 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
         function getAnswerText(value, type) {
             const maps = {
                 time: {
-                    'energy_depletion': 'Тянется мучительно',
-                    'flow': 'Летит незаметно',
-                    'entanglement': 'Искажается, скачет',
-                    'stable': 'Идёт нормально, нейтрально'
+                    'energy_depletion': currentLang === 'ru' ? 'Тянется мучительно' : 'Drags painfully',
+                    'flow': currentLang === 'ru' ? 'Летит незаметно' : 'Flies unnoticed',
+                    'entanglement': currentLang === 'ru' ? 'Искажается, скачет' : 'Distorts, jumps',
+                    'stable': currentLang === 'ru' ? 'Идёт нормально, нейтрально' : 'Goes normally, neutrally'
                 },
                 body: {
-                    'tight_control': 'Напряжение, скованность',
-                    'energy_depletion': 'Усталость, тяжесть, истощение',
-                    'resource': 'Лёгкость, энергия, тонус',
-                    'entanglement': 'Дереализация, онемение, "выключенность"'
+                    'tight_control': currentLang === 'ru' ? 'Напряжение, скованность' : 'Tension, stiffness',
+                    'energy_depletion': currentLang === 'ru' ? 'Усталость, тяжесть, истощение' : 'Fatigue, heaviness, exhaustion',
+                    'resource': currentLang === 'ru' ? 'Лёгкость, энергия, тонус' : 'Lightness, energy, tone',
+                    'entanglement': currentLang === 'ru' ? 'Дереализация, онемение, "выключенность"' : 'Derealization, numbness, "switched-offness"'
                 },
                 task: {
-                    'tight_control': 'Не могу начать, прокрастинация',
-                    'entanglement': 'Кручусь на месте, много мыслей, но нет результата',
-                    'energy_depletion': 'Нет интереса, апатия, всё безразлично',
-                    'resource': 'Сфокусирован, решается легко, состояние потока'
+                    'tight_control': currentLang === 'ru' ? 'Не могу начать, прокрастинация' : 'Can\'t start, procrastination',
+                    'entanglement': currentLang === 'ru' ? 'Кручусь на месте, много мыслей, но нет результата' : 'Spinning in place, many thoughts but no result',
+                    'energy_depletion': currentLang === 'ru' ? 'Нет интереса, апатия, всё безразлично' : 'No interest, apathy, everything is indifferent',
+                    'resource': currentLang === 'ru' ? 'Сфокусирован, решается легко, состояние потока' : 'Focused, solves easily, flow state'
                 }
             };
 
@@ -1077,47 +1124,89 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
                 // Зажатый контроль
                 "Тянется мучительно_ Напряжение, скованность_ Не могу начать, прокрастинация": {
                     diagnosis: "tight_control",
-                    tool: "Тонкая настройка Смотрителя"
+                    tool: currentLang === 'ru' ? "Тонкая настройка Смотрителя" : "Fine-tuning the Observer"
                 },
                 "Тянется мучительно_ Напряжение, скованность_ Кручусь на месте, много мыслей, но нет результата": {
                     diagnosis: "tight_control",
-                    tool: "Тонкая настройка Смотрителя"
+                    tool: currentLang === 'ru' ? "Тонкая настройка Смотрителя" : "Fine-tuning the Observer"
                 },
 
                 // Энергетическое истощение
                 "Тянется мучительно_ Усталость, тяжесть, истощение_ Нет интереса, апатия, всё безразлично": {
                     diagnosis: "energy_depletion",
-                    tool: "Энергосберегающий режим"
+                    tool: currentLang === 'ru' ? "Энергосберегающий режим" : "Energy-saving mode"
                 },
                 "Тянется мучительно_ Усталость, тяжесть, истощение_ Не могу начать, прокрастинация": {
                     diagnosis: "energy_depletion",
-                    tool: "Энергосберегающий режим"
+                    tool: currentLang === 'ru' ? "Энергосберегающий режим" : "Energy-saving mode"
                 },
                 "Летит незаметно_ Усталость, тяжесть, истощение_ Сфокусирован, решается легко, состояние потока": {
                     diagnosis: "energy_depletion",
-                    tool: "Энергосберегающий режим"
+                    tool: currentLang === 'ru' ? "Энергосберегающий режим" : "Energy-saving mode"
                 },
 
                 // Запутанность
                 "Искажается, скачет_ Дереализация, онемение, \"выключенность\"_ Кручусь на месте, много мыслей, но нет результата": {
                     diagnosis: "entanglement",
-                    tool: "Выход за Грань"
+                    tool: currentLang === 'ru' ? "Выход за Грань" : "Going Beyond the Boundary"
                 },
                 "Искажается, скачет_ Дереализация, онемение, \"выключенность\"_ Нет интереса, апатия, всё безразлично": {
                     diagnosis: "entanglement",
-                    tool: "Выход за Грань"
+                    tool: currentLang === 'ru' ? "Выход за Грань" : "Going Beyond the Boundary"
                 },
 
                 // Ресурсное состояние
                 "Летит незаметно_ Лёгкость, энергия, тонус_ Сфокусирован, решается легко, состояние потока": {
                     diagnosis: "resource",
-                    tool: "Не мешать"
+                    tool: currentLang === 'ru' ? "Не мешать" : "Don't interfere"
                 },
                 "Идёт нормально, нейтрально_ Лёгкость, энергия, тонус_ Сфокусирован, решается легко, состояние потока": {
                     diagnosis: "resource",
-                    tool: "Не мешать"
+                    tool: currentLang === 'ru' ? "Не мешать" : "Don't interfere"
                 }
             };
+
+            // Английские комбинации
+            if (currentLang === 'en') {
+                exactCombinations = {
+                    "Drags painfully_ Tension, stiffness_ Can't start, procrastination": {
+                        diagnosis: "tight_control",
+                        tool: "Fine-tuning the Observer"
+                    },
+                    "Drags painfully_ Tension, stiffness_ Spinning in place, many thoughts but no result": {
+                        diagnosis: "tight_control",
+                        tool: "Fine-tuning the Observer"
+                    },
+                    "Drags painfully_ Fatigue, heaviness, exhaustion_ No interest, apathy, everything is indifferent": {
+                        diagnosis: "energy_depletion",
+                        tool: "Energy-saving mode"
+                    },
+                    "Drags painfully_ Fatigue, heaviness, exhaustion_ Can't start, procrastination": {
+                        diagnosis: "energy_depletion",
+                        tool: "Energy-saving mode"
+                    },
+                    "Flies unnoticed_ Fatigue, heaviness, exhaustion_ Focused, solves easily, flow state": {
+                        diagnosis: "energy_depletion",
+                        tool: "Energy-saving mode"
+                    },
+                    "Distorts, jumps_ Derealization, numbness, \"switched-offness\"_ Spinning in place, many thoughts but no result": {
+                        diagnosis: "entanglement",
+                        tool: "Going Beyond the Boundary"
+                    },
+                    "Distorts, jumps_ Derealization, numbness, \"switched-offness\"_ No interest, apathy, everything is indifferent": {
+                        diagnosis: "entanglement",
+                        tool: "Going Beyond the Boundary"
+                    },
+                    "Flies unnoticed_ Lightness, energy, tone_ Focused, solves easily, flow state": {
+                        diagnosis: "resource",
+                        tool: "Don't interfere"
+                    },
+                    "Goes normally, neutrally_ Lightness, energy, tone_ Focused, solves easily, flow state": {
+                        diagnosis: "resource",
+                        tool: "Don't interfere"
+                    }
+                };
+            }
 
             return exactCombinations[key] || null;
         }
@@ -1132,46 +1221,47 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
             if (isBlockage(timeQuality, bodyQuality, taskQuality)) {
                 return {
                     diagnosis: "tight_control",
-                    tool: "Тонкая настройка Смотрителя"
+                    tool: currentLang === 'ru' ? "Тонкая настройка Смотрителя" : "Fine-tuning the Observer"
                 };
             }
 
             if (isEnergyFailure(timeQuality, bodyQuality, taskQuality)) {
                 return {
                     diagnosis: "energy_depletion",
-                    tool: "Энергосберегающий режим"
+                    tool: currentLang === 'ru' ? "Энергосберегающий режим" : "Energy-saving mode"
                 };
             }
 
             if (isDisorientation(timeQuality, bodyQuality, taskQuality)) {
                 return {
                     diagnosis: "entanglement",
-                    tool: "Выход за Грань"
+                    tool: currentLang === 'ru' ? "Выход за Грань" : "Going Beyond the Boundary"
                 };
             }
 
             if (isResourceState(timeQuality, bodyQuality, taskQuality)) {
                 return {
                     diagnosis: "resource",
-                    tool: "Не мешать"
+                    tool: currentLang === 'ru' ? "Не мешать" : "Don't interfere"
                 };
             }
 
             // СЛОЖНЫЕ СМЕШАННЫЕ СОСТОЯНИЯ
             return {
                 diagnosis: "resource",
-                tool: "Наблюдение и осознавание"
+                tool: currentLang === 'ru' ? "Наблюдение и осознавание" : "Observation and awareness"
             };
         }
 
         function analyzeTimeQuality(timeAnswer) {
             var quality = { flow: 0, clarity: 0, presence: 0 };
 
-            if (timeAnswer.includes("Летит") || timeAnswer.includes("нормально")) {
+            if (timeAnswer.includes("Летит") || timeAnswer.includes("нормально") || 
+                timeAnswer.includes("Flies") || timeAnswer.includes("normally")) {
                 quality.flow = 2; quality.clarity = 2; quality.presence = 1;
-            } else if (timeAnswer.includes("Тянется")) {
+            } else if (timeAnswer.includes("Тянется") || timeAnswer.includes("Drags")) {
                 quality.flow = 0; quality.clarity = 1; quality.presence = 2;
-            } else if (timeAnswer.includes("Искажается")) {
+            } else if (timeAnswer.includes("Искажается") || timeAnswer.includes("Distorts")) {
                 quality.flow = 1; quality.clarity = 0; quality.presence = 0;
             }
             return quality;
@@ -1180,13 +1270,13 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
         function analyzeBodyQuality(bodyAnswer) {
             var quality = { energy: 0, connection: 0, tension: 0 };
 
-            if (bodyAnswer.includes("Лёгкость")) {
+            if (bodyAnswer.includes("Лёгкость") || bodyAnswer.includes("Lightness")) {
                 quality.energy = 2; quality.connection = 2; quality.tension = 0;
-            } else if (bodyAnswer.includes("Усталость")) {
+            } else if (bodyAnswer.includes("Усталость") || bodyAnswer.includes("Fatigue")) {
                 quality.energy = 0; quality.connection = 1; quality.tension = 1;
-            } else if (bodyAnswer.includes("Напряжение")) {
+            } else if (bodyAnswer.includes("Напряжение") || bodyAnswer.includes("Tension")) {
                 quality.energy = 1; quality.connection = 0; quality.tension = 2;
-            } else if (bodyAnswer.includes("Дереализация")) {
+            } else if (bodyAnswer.includes("Дереализация") || bodyAnswer.includes("Derealization")) {
                 quality.energy = 0; quality.connection = 0; quality.tension = 1;
             }
             return quality;
@@ -1195,13 +1285,14 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
         function analyzeTaskQuality(taskAnswer) {
             var quality = { focus: 0, clarity: 0, action: 0 };
 
-            if (taskAnswer.includes("поток") || taskAnswer.includes("Решается")) {
+            if (taskAnswer.includes("поток") || taskAnswer.includes("Решается") || 
+                taskAnswer.includes("flow") || taskAnswer.includes("solves")) {
                 quality.focus = 2; quality.clarity = 2; quality.action = 2;
-            } else if (taskAnswer.includes("Не могу начать")) {
+            } else if (taskAnswer.includes("Не могу начать") || taskAnswer.includes("Can't start")) {
                 quality.focus = 1; quality.clarity = 0; quality.action = 0;
-            } else if (taskAnswer.includes("Кручусь")) {
+            } else if (taskAnswer.includes("Кручусь") || taskAnswer.includes("Spinning")) {
                 quality.focus = 0; quality.clarity = 1; quality.action = 0;
-            } else if (taskAnswer.includes("Нет интереса")) {
+            } else if (taskAnswer.includes("Нет интереса") || taskAnswer.includes("No interest")) {
                 quality.focus = 0; quality.clarity = 0; quality.action = 1;
             }
             return quality;
@@ -1227,24 +1318,32 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
         function setDiagnosis(diagnosis, tool) {
             const diagnoses = {
                 tight_control: {
-                    state: "ЗАЖАТЫЙ КОНТРОЛЬ",
-                    description: "«Смотритель» работает в режиме гиперконтроля. Высокое сопротивление Океана (S), низкая Свобода Смотрителя.",
-                    tool: tool || "Тонкая настройка Смотрителя"
+                    state: currentLang === 'ru' ? "ЗАЖАТЫЙ КОНТРОЛЬ" : "TIGHT CONTROL",
+                    description: currentLang === 'ru' ? 
+                        "«Смотритель» работает в режиме гиперконтроля. Высокое сопротивление Океана (S), низкая Свобода Смотрителя." : 
+                        "The \"Observer\" works in hypercontrol mode. High Ocean Resistance (S), low Observer Freedom.",
+                    tool: tool
                 },
                 energy_depletion: {
-                    state: "ЭНЕРГЕТИЧЕСКОЕ ИСТОЩЕНИЕ",
-                    description: "Низкий Поток_КО, высокое Сопротивление_Океана. E_сис критически низкое.",
-                    tool: tool || "Энергосберегающий режим"
+                    state: currentLang === 'ru' ? "ЭНЕРГЕТИЧЕСКОЕ ИСТОЩЕНИЕ" : "ENERGY DEPLETION",
+                    description: currentLang === 'ru' ? 
+                        "Низкий Поток_КО, высокое Сопротивление_Океана. E_сис критически низкое." : 
+                        "Low QA_Flow, high Ocean_Resistance. E_sys critically low.",
+                    tool: tool
                 },
                 entanglement: {
-                    state: "ЗАПУТАННОСТЬ",
-                    description: "«Кольца» запускаются, но не замыкаются. Высокий конфликт паттернов, нарушение фазы Мысли.",
-                    tool: tool || "Выход за Грань"
+                    state: currentLang === 'ru' ? "ЗАПУТАННОСТЬ" : "ENTANGLEMENT",
+                    description: currentLang === 'ru' ? 
+                        "«Кольца» запускаются, но не замыкаются. Высокий конфликт паттернов, нарушение фазы Мысли." : 
+                        "\"Rings\" initiate but don't close. High pattern conflict, Thought phase disruption.",
+                    tool: tool
                 },
                 resource: {
-                    state: "РЕСУРСНОЕ СОСТОЯНИЕ",
-                    description: "Система работает оптимально. E_сис высокое, оптимальные параметры сопротивления.",
-                    tool: tool || "Не мешать"
+                    state: currentLang === 'ru' ? "РЕСУРСНОЕ СОСТОЯНИЕ" : "RESOURCE STATE",
+                    description: currentLang === 'ru' ? 
+                        "Система работает оптимально. E_сис высокое, оптимальные параметры сопротивления." : 
+                        "System works optimally. High E_sys, optimal resistance parameters.",
+                    tool: tool
                 }
             };
 
@@ -1256,27 +1355,9 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
 
             stateText.textContent = diagnosisData.state;
             descText.textContent = diagnosisData.description;
-            toolHtml.innerHTML = `<strong>ИНСТРУМЕНТ: ${diagnosisData.tool}</strong>`;
+            toolHtml.innerHTML = `<strong>${currentLang === 'ru' ? 'ИНСТРУМЕНТ:' : 'TOOL:'} ${diagnosisData.tool}</strong>`;
             resultDiv.style.display = 'block';
         }
-
-        // ★★★ СТАРЫЕ ФУНКЦИИ (БЕЗ ИЗМЕНЕНИЙ) ★★★
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
 
         function startAnimation() {
             const scene = document.getElementById('scene');
@@ -1321,85 +1402,81 @@ background: rgba(0,0,0,0.3); border-radius: 4px; display: none;">
             }, 5100);
         }
     </script>
-		<!-- БЛОК БЛАГОДАРНОСТИ - НАЧАЛО -->
-	<!-- Разместить перед закрывающим тегом </body> -->
-	<script>
-	// Функция для отображения благодарности
-	function showAIAcknowledgement() {
-	    // Создаем элемент для благодарности
-	    const acknowledgement = document.createElement('div');
-	    acknowledgement.innerHTML = `
-	        <div style="
-	            position: fixed;
-	            bottom: 20px;
-	            right: 20px;
-	            background: rgba(0, 109, 109, 0.95);
-	            color: #e0f0ff;
-	            padding: 15px;
-	            border-radius: 8px;
-	            border-left: 4px solid #00b3b3;
-	            font-size: 0.9rem;
-	            max-width: 300px;
-	            z-index: 10000;
-	            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-	            animation: slideInRight 0.5s ease-out;
-	        ">
-	            <div style="font-weight: bold; margin-bottom: 5px; color: #00ffff;">
-	                🤖 С благодарностью AI-ассистенту
-	            </div>
-	            <div style="line-height: 1.4;">
-	                За помощь в разработке кода и формулировок теории квантового осознания
-	            </div>
-	            <button onclick="this.parentElement.remove()" style="
-	                position: absolute;
-	                top: 5px;
-	                right: 8px;
-	                background: none;
-	                border: none;
-	                color: #00ffff;
-	                cursor: pointer;
-	                font-size: 1.2rem;
-	            ">×</button>
-	        </div>
-	    `;
-	    
-	    document.body.appendChild(acknowledgement);
-	    
-	    // Автоматически скрываем через 10 секунд
-	    setTimeout(() => {
-	        if (acknowledgement.parentElement) {
-	            acknowledgement.remove();
-	        }
-	    }, 10000);
-	}
-	
-	// Показываем благодарность при загрузке страницы
-	document.addEventListener('DOMContentLoaded', function() {
-	    // Показываем только 10% посетителям чтобы не надоедать
-	    if (Math.random() < 0.1) {
-	        setTimeout(showAIAcknowledgement, 3000);
-	    }
-	});
-	
-	// Добавляем CSS анимацию
-	const style = document.createElement('style');
-	style.textContent = `
-	    @keyframes slideInRight {
-	        from {
-	            transform: translateX(100%);
-	            opacity: 0;
-	        }
-	        to {
-	            transform: translateX(0);
-	            opacity: 1;
-	        }
-	    }
-	`;
-	document.head.appendChild(style);
-	</script>
-	<!-- БЛОК БЛАГОДАРНОСТИ - КОНЕЦ -->
+    
+    <!-- БЛОК БЛАГОДАРНОСТИ -->
+    <script>
+    function showAIAcknowledgement() {
+        const acknowledgement = document.createElement('div');
+        acknowledgement.innerHTML = `
+            <div style="
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: rgba(0, 109, 109, 0.95);
+                color: #e0f0ff;
+                padding: 15px;
+                border-radius: 8px;
+                border-left: 4px solid #00b3b3;
+                font-size: 0.9rem;
+                max-width: 300px;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                animation: slideInRight 0.5s ease-out;
+            ">
+                <div style="font-weight: bold; margin-bottom: 5px; color: #00ffff;">
+                    ${currentLang === 'ru' ? '🤖 С благодарностью AI-ассистенту' : '🤖 With gratitude to AI assistant'}
+                </div>
+                <div style="line-height: 1.4;">
+                    ${currentLang === 'ru' ? 'За помощь в разработке кода и формулировок теории квантового осознания' : 'For help in developing code and formulations of quantum awareness theory'}
+                </div>
+                <button onclick="this.parentElement.remove()" style="
+                    position: absolute;
+                    top: 5px;
+                    right: 8px;
+                    background: none;
+                    border: none;
+                    color: #00ffff;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                ">×</button>
+            </div>
+        `;
+        
+        document.body.appendChild(acknowledgement);
+        
+        // Автоматически скрываем через 10 секунд
+        setTimeout(() => {
+            if (acknowledgement.parentElement) {
+                acknowledgement.remove();
+            }
+        }, 10000);
+    }
+    
+    // Показываем благодарность при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        // Показываем только 10% посетителям чтобы не надоедать
+        if (Math.random() < 0.1) {
+            setTimeout(showAIAcknowledgement, 3000);
+        }
+    });
+    
+    // Добавляем CSS анимацию
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    </script>
 </body>
-
 </html>
 
 
