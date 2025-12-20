@@ -143,7 +143,7 @@
   "energyExplanation": "Determines overall system efficiency. High E<sub>sys</sub> — \"flow\" state.",
   
   "timeFormulaTitle": "SUBJECTIVE TIME",
-  "timeFormula": "Δt = (K × F × W) ÷ (I × S × Int × C)",
+  "timeFormula": "Δt = K × ((F × W) ÷ (I × S × Int × C))",
   "timeFormulaParams": "Parameters: K-constant, F-QA frequency, W-volitional effort, I- intellectual complexity, S-deep resistance, Int-interest, C- concentration.<br>Time \"flies\" (small Δt) with high QA density. Time \"drags\" (large Δt) with low QA density.",
   
   "resistanceFormulaTitle": "OCEAN RESISTANCE",
