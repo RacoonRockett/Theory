@@ -147,7 +147,7 @@
   "timeFormulaParams": "Parameters: K-constant, F-QA frequency, W-volitional effort, I- intellectual complexity, S-deep resistance, Int-interest, C- concentration.<br>Time \"flies\" (small Δt) with high QA density. Time \"drags\" (large Δt) with low QA density.",
   
   "resistanceFormulaTitle": "OCEAN RESISTANCE",
-  "resistanceFormula": "S = I × S × (1 ÷ Int)",
+  "resistanceFormula": "S = I × S<sub>d</sub> × (1 ÷ Int)",
   "resistanceFormulaParams": "Components: I (intellectual complexity of pattern), S (deep resistance to patterns), Int (interest/involvement as reducing coefficient).",
   
   "scienceBridgeTitle": "SCIENCE BRIDGE: QA THEORY AND MODERN RESEARCH",
