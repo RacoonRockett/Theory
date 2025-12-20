@@ -148,7 +148,7 @@
   
   "resistanceFormulaTitle": "OCEAN RESISTANCE",
   "resistanceFormula": "S = I × S<sub>d</sub> × (1 ÷ Int)",
-  "resistanceFormulaParams": "Components: I (intellectual complexity of pattern), S (deep resistance to patterns), Int (interest/involvement as reducing coefficient).",
+  "resistanceFormulaParams": "Components: I (intellectual complexity of pattern), S<sub>d</sub> (deep resistance to patterns), Int (interest/involvement as reducing coefficient).",
   
   "scienceBridgeTitle": "SCIENCE BRIDGE: QA THEORY AND MODERN RESEARCH",
   "scienceBridgeIntro": "Quantum Awareness Theory doesn't exist in a vacuum. Here's how it relates to modern scientific directions:",
